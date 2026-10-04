@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pass Arena - La carte avantages des jeunes</title>
+<meta name="description" content="Pass Arena : carte de réductions 18-30 ans. 14,99€. Valable jusqu'au 31 août 2027 à Arles, Nîmes, Avignon et alentours.">
+<link rel="canonical" href="https://www.passarena.fr">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pass Arena">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="carte réduction jeunes, Arles, Nîmes, Avignon, bons plans étudiants, réductions 18-30 ans, pass jeune">
+<meta name="author" content="Pass Arena">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+
+<!-- Mode application (Android / Chrome) -->
+
+
+<!-- Open Graph / Réseaux sociaux (Facebook, Instagram, WhatsApp...) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pass Arena - La carte avantages des jeunes 18-30 ans">
+<meta property="og:description" content="Carte de réductions 18-30 ans à 14,99€, valable jusqu'au 31 août 2027 à Arles, Nîmes, Avignon et alentours.">
+<meta property="og:url" content="https://www.passarena.fr">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Pass Arena">
+<meta property="og:image" content="https://www.passarena.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pass Arena - La carte avantages des jeunes 18-30 ans">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pass Arena - La carte avantages des jeunes 18-30 ans">
+<meta name="twitter:description" content="Carte de réductions 18-30 ans à 14,99€, valable jusqu'au 31 août 2027 à Arles, Nîmes, Avignon et alentours.">
+<meta name="twitter:image" content="https://www.passarena.fr/og-image.png">
+
+<!-- Données structurées Schema.org pour les moteurs de recherche -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pass Arena",
+  "url": "https://www.passarena.fr",
+  "email": "passarena1@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "44 Rue Voltaire",
+    "postalCode": "13200",
+    "addressLocality": "Arles",
+    "addressCountry": "FR"
+  },
+  "areaServed": ["Arles", "Nîmes", "Avignon"],
+  "description": "Carte de réductions pour les 18-30 ans donnant accès à des avantages chez des partenaires locaux à Arles, Nîmes, Avignon et alentours."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Carte Pass Arena 2026-2027",
+  "description": "Carte de réductions 18-30 ans valable jusqu'au 31 août 2027, donnant accès à des réductions chez de nombreux partenaires à Arles, Nîmes, Avignon et alentours.",
+    "offers": {
+    "@type": "Offer",
+    "priceCurrency": "EUR",
+    "price": "14.99",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.passarena.fr"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0a;--dp:#0f0f0f;--cd:#161616;--bd:#2a2a2a;--gr:linear-gradient(135deg,#f7971e,#e040a0,#9b59b6);--tx:#f0f0f0;--mu:#888;--fd:'Syne',sans-serif;--fb:'Space Grotesk',sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--fb);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(10,10,10,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.nl{display:flex;align-items:center;gap:10px;text-decoration:none}
+#floatcta{position:fixed;bottom:22px;right:22px;z-index:150;background:var(--gr);color:#fff!important;padding:14px 24px;border-radius:50px;font-family:var(--fb);font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 8px 26px rgba(0,0,0,.45);display:flex;align-items:center;gap:8px;transition:transform .2s,box-shadow .2s}
+#floatcta:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.55)}
+@media(max-width:640px){#floatcta{left:16px;right:16px;bottom:16px;justify-content:center;padding:15px;font-size:.92rem}}
+.nl img{height:42px;width:42px;object-fit:contain;border-radius:50%}
+.nl span{font-family:var(--fd);font-size:1.2rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nm{display:flex;gap:1.8rem;list-style:none}
+.nm a{color:var(--mu);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s}
+.nm a:hover{color:var(--tx)}
+.nc{background:var(--gr);color:#fff!important;padding:8px 18px;border-radius:50px;font-weight:600!important}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
+.hb span{display:block;width:24px;height:2px;background:var(--tx);border-radius:2px}
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5vw 60px;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(155,89,182,.18) 0%,transparent 70%)}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.2;animation:fl 8s ease-in-out infinite}
+.o1{width:400px;height:400px;background:#9b59b6;top:10%;left:-10%}
+.o2{width:300px;height:300px;background:#f7971e;bottom:15%;right:-5%;animation-delay:3s}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-28px)}}
+.hc{position:relative;z-index:1;max-width:780px}
+.hbadge{display:inline-block;background:rgba(155,89,182,.15);border:1px solid rgba(155,89,182,.35);color:#c77dff;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-bottom:24px}
+.hlogo{width:120px;height:120px;object-fit:contain;border-radius:50%;margin-bottom:20px;filter:drop-shadow(0 0 40px rgba(155,89,182,.5));animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 30px rgba(155,89,182,.4))}50%{filter:drop-shadow(0 0 60px rgba(247,151,30,.5))}}
+h1{font-family:var(--fd);font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px}
+.gt{background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hsub{font-size:1.05rem;color:var(--mu);max-width:520px;margin:0 auto 36px;line-height:1.7}
+.hact{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bp{display:inline-block;background:var(--gr);color:#fff;padding:14px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.95rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 30px rgba(155,89,182,.35)}
+.bp:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(155,89,182,.5)}
+.bo{display:inline-block;border:1.5px solid var(--bd);color:var(--tx);padding:13px 30px;border-radius:50px;text-decoration:none;font-weight:600;font-size:.95rem;transition:border-color .2s}
+.bo:hover{border-color:#9b59b6}
+.sh{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--mu);font-size:.78rem;display:flex;flex-direction:column;align-items:center;gap:6px;animation:bn 2s infinite}
+@keyframes bn{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+section{padding:90px 5vw}
+.sl{font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#e040a0;margin-bottom:14px}
+h2{font-family:var(--fd);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
+.si{color:var(--mu);font-size:1rem;max-width:560px;margin-bottom:48px;line-height:1.75}
+#comment{background:var(--dp)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px}
+.step{background:var(--cd);padding:36px 28px;position:relative;overflow:hidden;transition:background .3s}
+.step:hover{background:#1c1c1c}
+.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--gr);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.step:hover::before{transform:scaleX(1)}
+.sn{font-family:var(--fd);font-size:2.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:.3;line-height:1;margin-bottom:16px}
+.si2{font-size:1.8rem;margin-bottom:14px}
+.step h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.step p{color:var(--mu);font-size:.88rem;line-height:1.6}
+#carte{background:var(--bg)}
+.cshow{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1060px;margin:0 auto}
+.cimg{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(155,89,182,.3)}
+.cimg img{width:100%;display:block}
+.cfeat{list-style:none}
+.cfeat li{padding:12px 0;border-bottom:1px solid var(--bd);color:var(--mu);font-size:.9rem;display:flex;align-items:center;gap:10px}
+.cfeat li:last-child{border-bottom:none}
+.cfeat li::before{content:'';display:inline-block;width:16px;height:16px;background:var(--gr);border-radius:50%;flex-shrink:0}
+#partenaires{background:var(--dp)}
+.fltrs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.fltrs-sep{font-size:.72rem;font-weight:600;color:var(--mu);letter-spacing:.08em;text-transform:uppercase;margin:8px 0 4px;width:100%}
+.fb{background:var(--cd);border:1.5px solid var(--bd);color:var(--mu);padding:7px 15px;border-radius:50px;font-family:var(--fb);font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}.psearch-wrap{position:relative;max-width:420px;margin:0 0 18px}.psearch{width:100%;background:var(--cd);border:1.5px solid var(--bd);color:var(--tx);padding:12px 40px 12px 40px;border-radius:50px;font-family:var(--fb);font-size:.9rem;box-sizing:border-box;transition:border-color .2s}.psearch:focus{outline:none;border-color:#9b59b6}.psearch::-webkit-search-cancel-button{display:none}.psearch-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);opacity:.5;font-size:.9rem;pointer-events:none}.psearch-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:none;color:var(--tx);width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:.75rem;display:flex;align-items:center;justify-content:center}.psearch-clear:hover{background:rgba(255,255,255,.16)}
+.fb:hover{border-color:#9b59b6;color:var(--tx)}
+.fb.on{background:var(--gr);border-color:transparent;color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:24px}
+.pc{background:var(--cd);border:1px solid var(--bd);border-radius:18px;overflow:hidden;cursor:pointer;transition:border-color .25s,transform .25s,box-shadow .25s;display:flex;flex-direction:column}.pc{position:relative}.fav-btn{position:absolute;top:10px;right:10px;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid var(--bd);background:rgba(20,20,20,.65);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s,transform .15s}.fav-btn:hover{transform:scale(1.1)}.fav-btn.on{color:#ff5a7a;border-color:#ff5a7a}
+.pc:hover{border-color:rgba(155,89,182,.6);transform:translateY(-4px);box-shadow:0 16px 40px rgba(155,89,182,.18)}
+.plw{display:flex;justify-content:center;align-items:center;padding:22px 22px 14px;background:rgba(255,255,255,.02)}
+.pl{width:90px;height:90px;border-radius:14px;overflow:hidden;background:#1e1e1e;display:flex;align-items:center;justify-content:center;border:1px solid var(--bd);flex-shrink:0}
+.pl img{width:100%;height:100%;object-fit:cover}
+.pi{font-family:var(--fd);font-size:1.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pb{padding:0 18px 18px;display:flex;flex-direction:column;flex:1}
+.pn{font-weight:700;font-size:1.05rem;margin-bottom:3px;text-align:center}
+.pty{font-size:.75rem;color:var(--mu);margin-bottom:9px;text-align:center}
+.pts{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
+.t{font-size:.62rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:50px;white-space:nowrap}
+.tr{color:#e040a0;background:rgba(224,64,160,.1);border:1px solid rgba(224,64,160,.2)}
+.tb{color:#f7971e;background:rgba(247,151,30,.1);border:1px solid rgba(247,151,30,.2)}
+.tl{color:#9b59b6;background:rgba(155,89,182,.1);border:1px solid rgba(155,89,182,.2)}
+.ts{color:#3ec6c6;background:rgba(62,198,198,.1);border:1px solid rgba(62,198,198,.2)}
+.tca{color:#f06292;background:rgba(240,98,146,.1);border:1px solid rgba(240,98,146,.2)}
+.tbe{color:#a5d6a7;background:rgba(165,214,167,.1);border:1px solid rgba(165,214,167,.2)}
+.to{color:#f7971e;background:rgba(247,151,30,.1);border:1px solid rgba(247,151,30,.2)}
+.tre{color:#7ed321;background:rgba(126,211,33,.08);border:1px solid rgba(126,211,33,.2)}
+.pad{color:var(--mu);font-size:.76rem;margin-bottom:10px;text-align:center}
+.pos{font-size:.78rem;color:rgba(255,255,255,.7);padding:7px 10px;border-radius:8px;background:rgba(247,151,30,.07);border:1px solid rgba(247,151,30,.15);margin-bottom:6px}
+.ppm{font-size:.78rem;color:rgba(255,255,255,.7);padding:7px 10px;border-radius:8px;background:rgba(155,89,182,.07);border:1px solid rgba(155,89,182,.15);margin-bottom:6px}
+.coffs{display:flex;flex-direction:column;gap:7px;margin-bottom:8px}
+.cof{border-radius:10px;padding:9px 11px;font-size:.86rem;line-height:1.45;font-weight:700}
+.cofl{display:block;font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;opacity:.9}
+.cof s{opacity:.6;font-weight:600;text-decoration-thickness:1.5px}
+.cof-os{background:rgba(247,151,30,.12);border:2px solid #f7971e;color:#ffb648}
+.cof-pm{background:rgba(59,130,246,.12);border:2px solid #3b82f6;color:#6cb2ff}
+.pna{font-size:.78rem;color:rgba(255,255,255,.25);font-style:italic;text-align:center;margin-bottom:6px}
+.sm{text-align:center;font-size:.8rem;font-weight:600;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-top:auto;padding-top:6px}
+.nores{display:none;grid-column:1/-1;text-align:center;color:var(--mu);padding:60px}
+.ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:500;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.ov.open{display:flex}
+.mb{background:#1a1a1a;border:1px solid var(--bd);border-radius:22px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.mbar{height:4px;background:var(--gr);border-radius:22px 22px 0 0}
+.mc{padding:30px}
+.mcls{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:var(--tx);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center}
+.mcls:hover{background:rgba(255,255,255,.16)}
+.mlw{display:flex;justify-content:center;margin-bottom:18px}
+.mlg{width:90px;height:90px;border-radius:14px;overflow:hidden;background:#1e1e1e;display:flex;align-items:center;justify-content:center;border:1px solid var(--bd)}
+.mlg img{width:100%;height:100%;object-fit:cover}
+.mpi{font-family:var(--fd);font-size:1.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mname{font-family:var(--fd);font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:4px}
+.mtype{color:var(--mu);font-size:.85rem;text-align:center;margin-bottom:6px}
+.maddr{color:var(--mu);font-size:.82rem;text-align:center;margin-bottom:14px}
+.mtags{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:22px}
+.moff{border-radius:12px;overflow:hidden;margin-bottom:12px}
+.mos{background:rgba(247,151,30,.07);border:1px solid rgba(247,151,30,.25)}
+.mpm{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.3)}
+.moh{padding:12px 16px 6px;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.mos .moh{color:#f7971e}
+.mpm .moh{color:#3b82f6}
+.mbg{font-size:.62rem;font-weight:600;background:rgba(247,151,30,.2);color:#f7971e;padding:2px 8px;border-radius:50px;margin-left:6px;text-transform:none}
+.mot{padding:0 16px 14px;font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.55}
+.mcond{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px 16px;font-size:.8rem;color:var(--mu);line-height:1.55;margin-top:4px}.mshare{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:14px;background:var(--gr);color:#fff;padding:13px;border-radius:50px;border:none;font-family:var(--fb);font-size:.9rem;font-weight:700;cursor:pointer;transition:opacity .2s}.mshare:hover{opacity:.9}.mactions{display:flex;gap:10px;margin-top:10px}.mfav{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;margin-top:0;background:transparent;color:var(--tx);padding:13px;border-radius:50px;border:1.5px solid var(--bd);font-family:var(--fb);font-size:.88rem;font-weight:600;cursor:pointer;transition:all .2s}.mfav.on,.mfav:hover{border-color:#ff5a7a;color:#ff5a7a}.mdir{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;background:transparent;color:var(--tx);padding:13px;border-radius:50px;border:1.5px solid var(--bd);font-family:var(--fb);font-size:.88rem;font-weight:600;cursor:pointer;transition:all .2s;text-decoration:none}.mdir:hover{border-color:#3ec6c6;color:#3ec6c6}
+#map-section{background:var(--bg)}
+#map{width:100%;height:520px;border-radius:18px;overflow:hidden;border:1px solid var(--bd);margin-top:40px;position:relative}
+#map .leaflet-container{width:100%!important;height:100%!important;position:absolute!important;top:0;left:0;overflow:hidden!important}
+#tarif{background:var(--dp)}
+.pwrap{display:flex;gap:40px;flex-wrap:wrap;align-items:flex-start}
+.pbox{max-width:460px;background:var(--cd);border:1px solid var(--bd);border-radius:22px;padding:44px;position:relative;overflow:hidden}
+.pbox::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gr)}
+.plbl{color:var(--mu);font-size:.88rem;margin-bottom:6px}
+.pamt{font-family:var(--fd);font-size:3.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:4px}
+.pper{color:var(--mu);font-size:.85rem;margin-bottom:28px}
+.pfeat{list-style:none}
+.pfeat li{padding:11px 0;border-bottom:1px solid var(--bd);color:var(--tx);font-size:.9rem;display:flex;gap:10px;align-items:center}
+.pfeat li:last-child{border-bottom:none}
+.chk{width:18px;height:18px;background:var(--gr);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.6rem;color:#fff}
+.pbtn{margin-top:28px;width:100%;background:var(--gr);color:#fff;padding:15px;border-radius:50px;font-family:var(--fb);font-size:1rem;font-weight:700;cursor:pointer;border:none;transition:opacity .2s}
+.pbtn:hover{opacity:.9}
+.pside{max-width:360px;margin-top:12px}
+.pside p{color:var(--mu);font-size:.9rem;line-height:1.75;margin-bottom:16px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:28px}
+.rc{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:20px;text-align:center}
+.ri{font-size:1.8rem;margin-bottom:10px}
+.rt{font-family:var(--fd);font-size:.88rem;font-weight:800;margin-bottom:6px}
+.rd{font-size:.78rem;color:var(--mu);line-height:1.5}
+.rnote{background:rgba(155,89,182,.08);border:1px solid rgba(155,89,182,.2);border-radius:10px;padding:14px 18px;margin-top:20px;font-size:.82rem;color:var(--mu);line-height:1.6}
+.rnote strong{color:var(--tx)}
+#rejoindre{background:var(--bg)}
+.jgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:980px}
+.jlist{list-style:none;margin-top:24px}
+.jlist li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--bd);color:var(--mu);font-size:.9rem;line-height:1.55}
+.jlist li:last-child{border-bottom:none}
+.jn{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1.4}
+.cf{background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:36px}
+.cf h3{font-size:1.2rem;font-weight:700;margin-bottom:22px}
+.fg{margin-bottom:18px}
+.fg label{display:block;font-size:.82rem;font-weight:600;color:var(--mu);margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1.5px solid var(--bd);color:var(--tx);padding:11px 14px;border-radius:9px;font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .2s;resize:vertical}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#9b59b6}
+.fg select option{background:var(--cd)}
+.fsub{background:var(--gr);color:#fff;border:none;padding:13px;border-radius:50px;font-family:var(--fb);font-size:.95rem;font-weight:700;cursor:pointer;width:100%;transition:opacity .2s}
+.fsub:hover{opacity:.9}
+#faq{background:var(--dp)}
+.fwrap{max-width:700px}
+.fi{border-bottom:1px solid var(--bd)}
+.fq{width:100%;background:none;border:none;color:var(--tx);font-family:var(--fb);font-size:.95rem;font-weight:600;text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.ficon{font-size:1.2rem;color:#e040a0;transition:transform .3s;flex-shrink:0}
+.fa{color:var(--mu);font-size:.9rem;line-height:1.7;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.fi.open .fa{max-height:300px;padding-bottom:18px}
+.fi.open .ficon{transform:rotate(45deg)}
+#contact{background:var(--bg)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px}
+.ci h3{font-size:1.1rem;font-weight:700;margin-bottom:20px}
+.cit{display:flex;align-items:center;gap:12px;margin-bottom:16px;color:var(--mu);font-size:.9rem}
+.cit a{color:var(--mu);text-decoration:none;transition:color .2s}
+.cit a:hover{color:var(--tx)}
+.cic{width:36px;height:36px;background:var(--cd);border:1px solid var(--bd);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+footer{background:var(--dp);border-top:1px solid var(--bd);padding:56px 5vw 28px}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.fbrand{display:flex;flex-direction:column;gap:14px}
+.flogo{display:flex;align-items:center;gap:10px}
+.flogo img{height:38px;border-radius:50%}
+.flogo span{font-family:var(--fd);font-weight:800;font-size:1.1rem;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fdesc{color:var(--mu);font-size:.85rem;line-height:1.7;max-width:280px}
+.fsoc{display:flex;gap:10px;margin-top:6px}
+.fsl{width:36px;height:36px;background:var(--cd);border:1px solid var(--bd);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--mu);text-decoration:none;transition:border-color .2s}
+.fsl:hover{border-color:#9b59b6}
+.fcol h4{font-size:.85rem;font-weight:700;margin-bottom:18px}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:9px}
+.fcol ul li a{color:var(--mu);text-decoration:none;font-size:.85rem;transition:color .2s}
+.fcol ul li a:hover{color:var(--tx)}
+.fbot{border-top:1px solid var(--bd);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--mu);font-size:.78rem}
+.oov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:600;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.oov.open{display:flex}
+.omb{background:#1a1a1a;border:1px solid var(--bd);border-radius:22px;max-width:520px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+@media(max-width:900px){.cshow,.jgrid,.cgrid{grid-template-columns:1fr}.fg2{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nm{display:none}.hb{display:flex}.nm.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:rgba(10,10,10,.97);padding:22px 5vw 28px;border-bottom:1px solid var(--bd);gap:1rem}.fg2{grid-template-columns:1fr}.steps,.hact,.pwrap{flex-direction:column}.hact{align-items:center}.fltrs{gap:6px}.pgrid{grid-template-columns:1fr}.cshow{grid-template-columns:1fr}}
+
+#splash{position:fixed;inset:0;background:var(--bg);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .4s ease,visibility .4s ease}
+#splash img{width:90px;height:90px;object-fit:contain;border-radius:50%;animation:splashPulse 1.4s ease-in-out infinite}
+#splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes splashPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.75}}
+
+.result-count{color:var(--mu);font-size:.8rem;margin:-6px 0 16px;text-align:center}
+#backtotop{position:fixed;bottom:22px;left:22px;z-index:150;width:46px;height:46px;border-radius:50%;background:var(--cd);border:1px solid var(--bd);color:var(--tx);display:none;align-items:center;justify-content:center;font-size:1.2rem;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.4);transition:transform .2s,opacity .2s;opacity:0}
+#backtotop.show{display:flex;opacity:1}
+#backtotop:hover{transform:translateY(-3px)}
+@media(max-width:640px){#backtotop{left:16px;bottom:16px;width:42px;height:42px}}
+
+.geo-btn{display:inline-flex;align-items:center;gap:6px;background:var(--cd);border:1px solid var(--bd);color:var(--tx);padding:8px 14px;border-radius:50px;font-family:var(--fb);font-size:.82rem;font-weight:600;cursor:pointer;margin:10px auto 0;transition:border-color .2s}
+.geo-btn:hover{border-color:#9b59b6}
+.geo-btn.active{border-color:#2ecc71;color:#2ecc71}
+.geo-wrap{text-align:center}
+</style>
+</head>
+<body>
+<div id="splash"><img src="img/logo.png" alt="Pass Arena"></div>
+
+<div class="ov" id="ov">
+  <div class="mb">
+    <div class="mbar"></div>
+    <button class="mcls" onclick="cM()">&#x2715;</button>
+    <div class="mc" id="mc"></div>
+  </div>
+</div>
+
+
+
+<nav>
+  <a class="nl" href="#"><img src="img/logo.png" alt="Pass Arena"><span>PASS ARENA</span></a>
+  <ul class="nm" id="nm">
+    <li><a href="#comment">Comment ça marche</a></li>
+    <li><a href="#partenaires">Partenaires</a></li>
+    <li><a href="#map-section">Carte</a></li>
+    <li><a href="#tarif">Tarif</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#tarif" class="nc">&#127903; Obtenir ma carte</a></li>
+    <li><a href="#rejoindre" class="nc">Je suis commerçant</a></li>
+  </ul>
+  <button class="hb" onclick="document.getElementById('nm').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero">
+  <div class="hbg"></div><div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hc">
+    <div class="hbadge">Arles, Nîmes, Avignon &amp; alentours &middot; 18-30 ans inclus &middot; Valable jusqu'au 31 août 2027</div>
+    <img src="img/logo.png" class="hlogo" alt="Pass Arena">
+    <h1>Le pass qui <span class="gt">libère</span> ta ville</h1>
+    <p class="hsub">Des réductions chez les meilleurs restos, commerces et activités d'Arles, Nîmes, Avignon et leurs alentours. Une seule carte, des dizaines d'avantages.</p>
+    <div class="hact">
+      <a href="#tarif" class="bp">OBTENIR MA CARTE</a>
+      <a href="#partenaires" class="bo">Voir tous nos partenaires</a>
+    </div>
+  </div>
+  <div class="sh"><span>Découvrir</span><svg width="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></div>
+</section>
+
+<section id="comment">
+  <div class="sl">Fonctionnement</div>
+  <h2>Simple comme bonjour</h2>
+  <p class="si">En 4 étapes, accède à tous les avantages de la région.</p>
+  <div class="steps">
+    <div class="step"><div class="si2">&#128722;</div><div class="sn">01</div><h3>Tu achètes ta carte</h3><p>14,99€. Achetable à tout moment, valable jusqu'au 31 août 2027.</p></div>
+    <div class="step"><div class="si2">&#128506;</div><div class="sn">02</div><h3>Tu choisis ton retrait</h3><p>Chez un partenaire point relais ou directement avec nous. Pièce d'identité obligatoire.</p></div>
+    <div class="step"><div class="si2">&#128179;</div><div class="sn">03</div><h3>Tu présentes ta carte</h3><p>Réduction appliquée immédiatement, sans appli ni QR code.</p></div>
+    <div class="step"><div class="si2">&#127881;</div><div class="sn">04</div><h3>Tu profites !</h3><p>Valable jusqu'au 31 août 2027 chez tous nos partenaires.</p></div>
+  </div>
+</section>
+
+<section id="carte">
+  <div class="cshow">
+    <div class="cimg"><img src="img/carte-visual.png" alt="Carte Pass Arena"></div>
+    <div>
+      <div class="sl">La carte</div>
+      <h2>Ton Pass Arena</h2>
+      <p class="si" style="margin-bottom:28px">Une carte physique nominative, valable jusqu'au 31 août 2027, quelle que soit ta date d'achat.</p>
+      <ul class="cfeat">
+        <li>Valable chez tous les partenaires</li>
+        <li>Nominative et non cessible</li>
+        <li>Valable jusqu'au 31 août 2027</li>
+        <li>Achetable à tout moment de la saison</li>
+        <li>Réductions immédiates sans appli</li>
+        <li>Nouveaux partenaires ajoutés régulièrement</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="partenaires">
+  <div class="sl">Partenaires</div>
+  <h2>Nos spots</h2>
+  <p class="si">Clique sur une fiche pour voir les offres et conditions. Filtre par catégorie ou par ville !</p>
+  <div class="psearch-wrap">
+    <span class="psearch-icon">&#128269;</span>
+    <input type="search" id="psearch" class="psearch" placeholder="Rechercher un partenaire..." autocomplete="off" oninput="onSearch(this.value)">
+    <button type="button" id="psearch-clear" class="psearch-clear" onclick="clearSearch()" aria-label="Effacer la recherche" style="display:none">&#10005;</button>
+  </div>
+  <div class="fltrs" id="fltrs">
+    <button class="fb on" data-f="all" onclick="filt(this)">Tous (58)</button>
+    <button class="fb" id="fav-filter-btn" data-f="favoris" onclick="filt(this)">&#9825; Mes favoris (<span id="fav-count">0</span>)</button>
+    <div class="fltrs-sep">Par catégorie</div>
+    <button class="fb" data-f="oneshot" onclick="filt(this)">&#127873; One Shot</button>
+    <button class="fb" data-f="restauration" onclick="filt(this)">&#127869; Restauration</button>
+    <button class="fb" data-f="bars" onclick="filt(this)">&#127865; Bars</button>
+    <button class="fb" data-f="brunch" onclick="filt(this)">&#9749; Café / Brunch</button>
+    <button class="fb" data-f="loisirs" onclick="filt(this)">&#127919; Loisirs</button>
+    <button class="fb" data-f="services" onclick="filt(this)">&#127873; Services</button>
+    <button class="fb" data-f="bienetre" onclick="filt(this)">&#127807; Bien-être</button>
+    <button class="fb" data-f="relais" onclick="filt(this)">&#128205; Points relais</button>
+    <div class="fltrs-sep">Par ville <span style="font-size:.68rem;color:#666">(combinable avec une catégorie)</span></div>
+    <button class="fb ville-btn" data-v="arles" onclick="filtV(this)">&#127968; Arles</button>
+    <button class="fb ville-btn" data-v="avignon" onclick="filtV(this)">&#127968; Avignon</button>
+    <button class="fb ville-btn" data-v="nimes" onclick="filtV(this)">&#127968; Nîmes</button>
+    <button class="fb ville-btn" data-v="saint-remy" onclick="filtV(this)">&#127968; Saint-Rémy</button>
+    <button class="fb ville-btn" data-v="fontvieille" onclick="filtV(this)">&#127968; Fontvieille</button>
+    <button class="fb ville-btn" data-v="isle-sur-la-sorgue" onclick="filtV(this)">&#127968; L'Isle-sur-la-Sorgue</button>
+  </div>
+  <p id="result-count" class="result-count">58 partenaires affichés</p>
+  <div class="pgrid" id="pgrid">
+
+<div class="pc" data-c="restauration arles" data-idx="0" onclick="oM(0)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(0)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/00-o-jinko.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/00-o-jinko-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">O Jinko</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 8 Place Paul Doumer, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Plat du jour à 15€ <s>18€</s> sur place, ou à 13,50€ <s>15€</s> à emporter</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot arles" data-idx="1" onclick="oM(1)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(1)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/01-sotheary.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/01-sotheary-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Sotheary</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span></div><p class="pad">&#128205; 28 Rue Voltaire, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>Menu spécial à 10€ (6 makis, 1 salade de chou, 1 canette 33cl)</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Formule Express 12€ : 1 plat + 1 dessert<br>&#8211; Menu Campus 14€ : Krousty poulet + 2 nems</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="2" onclick="oM(2)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(2)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/02-la-releve-foodtruck.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/02-la-releve-foodtruck-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">La Relève FoodTruck</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; Boulevard des Lices, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>1 Smash Burger et Frites achetés = 4 churros offerts</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot relais arles" data-idx="3" onclick="oM(3)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(3)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/03-chez-nono.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/03-chez-nono-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Chez Nono</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 10 Bis Rue du 4 Septembre, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>1 Galette achetée = 1 Dessert Offert</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 1 Galette achetée = 1 Gâteau maison offert<br>&#8211; 1 Menu Panini acheté = 1 canette offerte<br>&#8211; Toutes les salades à 15€</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot relais arles" data-idx="4" onclick="oM(4)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(4)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/04-blue-note.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/04-blue-note-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Blue Note</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 12 Rue du 4 Septembre, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>Un burger acheté = Frites et boisson offerts</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Pour un menu acheté = 1 dessert maison offert ou 10% de réduction</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="5" onclick="oM(5)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(5)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/05-maxi-grill.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/05-maxi-grill-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Maxi Grill</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 54 Rue du 4 Septembre, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Un sandwich, burger ou tacos acheté = frites offertes</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration fontvieille" data-idx="6" onclick="oM(6)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(6)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/06-le-coin-des-amis.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/06-le-coin-des-amis-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Le Coin des Amis</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 65 Cours Hyacinthe Bellon, 13990 Fontvieille</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Dessert du jour offert pour 15€ de consommation</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="7" onclick="oM(7)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(7)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/07-tonton-sam.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/07-tonton-sam-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Tonton Sam</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 10 Rue de l'Hôtel de Ville, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de réduction</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot relais arles" data-idx="8" onclick="oM(8)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(8)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/08-superfood.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/08-superfood-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">SuperFood</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 6 Rue Molière, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>Sandwich, wrap ou salade acheté = le 2ème offert</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de réduction sur toute la carte</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration bars oneshot relais arles" data-idx="9" onclick="oM(9)" style="order:2"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(9)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/09-plage-plage.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/09-plage-plage-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Plage Plage</p><p class="pty">Restaurant / Glaciers</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t tb">&#127866; Bar</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 6 Rue de la Cavalerie, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>1 cookie, soft, affogato ou glace acheté = le même produit offert</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Glace 2 boules à 5€ <s>6€</s><br>&#8211; Menu galette à 15€ <s>19€</s></div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot relais arles" data-idx="10" onclick="oM(10)" style="order:-3"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(10)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/10-le-petit-arles.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/10-le-petit-arles-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Le Petit Arles</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 29 Rue de l'Hôtel de Ville, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>1 croque ou quiche achetés = 1 offert du même produit</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>1 croque monsieur ou une crêpe classique achetés = 1 dessert offert (hors cookies)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+
+<div class="pc" data-c="restauration arles avignon saint-remy" data-idx="11" onclick="oM(11)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(11)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/11-mecha-uma.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/11-mecha-uma-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Mecha Uma</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; Arles, Avignon, Saint-Rémy-de-Provence</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>1 Ramen acheté = 3 toppings offerts (15€ <s>19,50€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="12" onclick="oM(12)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(12)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/12-arles-pizza.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#1e1e1e;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fd);font-size:.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">AP</span></div></div><div class="pb"><p class="pn">Arles Pizza</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 18 Rue des Porcelets, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 1 Pizza achetée = 1 canette (hors Red Bull)<br>&#8211; 2 Pizzas achetées = 3ème à -50%</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="13" onclick="oM(13)" style="order:2"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(13)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/13-arelatis.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/13-arelatis-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Arelatis</p><p class="pty">Glaciers</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 8 Place du Forum / 1 Rue Jean Jaurès, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 2,50€ la boule <s>3€</s><br>&#8211; 2 boules achetées = 1 topping offert</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="14" onclick="oM(14)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(14)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/14-midi-nomique.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/14-midi-nomique-logo.jpg" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Midi Nomique</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 19 Bis Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 1 sandwich acheté = boisson offerte<br>&#8211; ou -2€ sur la formule sandwich + dessert + boisson à 12,90€ (<s>14,90€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration oneshot avignon" data-idx="15" onclick="oM(15)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(15)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/15-nachos.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/15-nachos-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Nachos</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t to">&#127873; One Shot</span></div><p class="pad">&#128205; 16 Place Pie, 84000 Avignon</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>Crispy offert (Nachos + sauce cheesy maison + crispy bacon) sans contrepartie d'achat</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Menu plat + boisson + dessert au prix du menu plat + boisson</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="brunch oneshot arles" data-idx="16" onclick="oM(16)" style="order:1"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(16)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/16-mon-chou.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/16-mon-chou-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Mon Chou</p><p class="pty">Café / Brunch</p><div class="pts"><span class="t tca">&#9749; Café / Brunch</span><span class="t to">&#127873; One Shot</span></div><p class="pad">&#128205; 3 Place Voltaire, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>20% de réduction sur toute la note (valable également pour les non-porteurs)</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>1 breakfast, brunch ou lunch acheté = le 2ème à -50%</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="brunch oneshot relais arles" data-idx="17" onclick="oM(17)" style="order:1"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(17)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/17-cloe-brunch.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/17-cloe-brunch-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Cloé Brunch</p><p class="pty">Café / Brunch</p><div class="pts"><span class="t tca">&#9749; Café / Brunch</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 13 Place Voltaire, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>Un pancake salé acheté = un pancake sucré offert</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Un brunch salé ou sucré acheté = 1 pâtisserie ou boisson offerts (hors mocktails, jus pressé, citronnade, matcha et macchiatos)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="brunch nimes" data-idx="18" onclick="oM(18)" style="order:1"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(18)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/18-au-cafe.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/18-au-cafe-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Au Café</p><p class="pty">Café / Brunch</p><div class="pts"><span class="t tca">&#9749; Café / Brunch</span></div><p class="pad">&#128205; 7 Rue des Petits Souliers, 30000 Nîmes</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Formule Spéciale à 10€ (2 pancakes salés + 1 salade + 1 canette ou café)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="brunch saint-remy isle-sur-la-sorgue" data-idx="19" onclick="oM(19)" style="order:1"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(19)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/19-honore.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/19-honore-logo.jpg" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Honoré</p><p class="pty">Café / Brunch</p><div class="pts"><span class="t tca">&#9749; Café / Brunch</span></div><p class="pad">&#128205; L'Isle-sur-la-Sorgue / Saint-Rémy-de-Provence</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>1 plat acheté = 1 boisson chaude offerte (dans la limite d'une boisson par carte)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration avignon" data-idx="20" onclick="oM(20)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(20)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/20-gonfle.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/20-gonfle-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Gonflé</p><p class="pty">Boulangerie</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 27 Rue Saint-Agricol, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de réduction</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration relais arles" data-idx="21" onclick="oM(21)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(21)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/21-peach.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/21-peach-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Peach</p><p class="pty">Boulangerie</p><div class="pts"><span class="t tr">&#127828; Restauration</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 2 Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Formule Sandwich + cookie/financier + canette/eau à 8€ <s>9,50€</s> + 1 café offert<br>&#8211; 10% sur la formule petit-déjeuner</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="22" onclick="oM(22)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(22)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/22-la-feria-du-pain.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/22-la-feria-du-pain-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">La Féria du Pain</p><p class="pty">Boulangerie</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 18 Avenue Victor Hugo, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 2 portions Pizza ou Focaccia + eau ou canette à 5€ <s>6,40€</s><br>&#8211; Café + Croissant à 2€ <s>2,50€</s></div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bars arles" data-idx="23" onclick="oM(23)" style="order:3"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(23)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/23-l-antidote.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/23-l-antidote-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">L'Antidote</p><p class="pty">Bar</p><div class="pts"><span class="t tb">&#127866; Bar</span></div><p class="pad">&#128205; 16 Rue de la Liberté, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>15% de réduction sur les bières pression et les softs (hors féria)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bars avignon" data-idx="24" onclick="oM(24)" style="order:3"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(24)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/24-la-planque.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/24-la-planque-logo.jpg" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">La Planque</p><p class="pty">Bar</p><div class="pts"><span class="t tb">&#127866; Bar</span></div><p class="pad">&#128205; 19 Rue des Lices, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Happy Hour permanent : bière blonde 3,50€ le demi (<s>4€</s>) et 6,50€ la pinte (<s>7,50€</s>)<br>&#8211; Limonade pression 2,50€ le demi (<s>3€</s>) et 4,50€ la pinte (<s>5€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="loisirs arles" data-idx="25" onclick="oM(25)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(25)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/25-get-back-escape-game.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/25-get-back-escape-game-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Get Back Escape Game</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span></div><p class="pad">&#128205; 14 Rue Joseph Rainard, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise via le code ARENA10% (hors équipe de 2).</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="loisirs nimes" data-idx="26" onclick="oM(26)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(26)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/26-l-enfance-de-l-art.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/26-l-enfance-de-l-art-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">L'Enfance de l'Art</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span></div><p class="pad">&#128205; 20 Rue Emile Jamais, 30900 Nîmes</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>100€ les 4 séances d'atelier peinture individuel de 2H <s>175€</s></div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services loisirs relais arles" data-idx="27" onclick="oM(27)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(27)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/27-lou-delahaye.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/27-lou-delahaye-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Lou Delahaye</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span><span class="t ts">&#128717; Services</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 44 Rue Voltaire, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>50% de remise sur le premier cours</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>2 cours achetés = le 3ème offert</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services loisirs relais arles" data-idx="28" onclick="oM(28)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(28)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/28-baptiste-achard.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/28-baptiste-achard-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Baptiste Achard</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span><span class="t ts">&#128717; Services</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 44 Rue Voltaire, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>80€ le programme d'un mois (<s>120€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="loisirs arles" data-idx="29" onclick="oM(29)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(29)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/29-sprinter-club-arlesien.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/29-sprinter-club-arlesien-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Sprinter Club Arlésien</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span></div><p class="pad">&#128205; 3 Boulevard des Lices, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10€ de remise sur l'adhésion (80€ <s>90€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="loisirs arles" data-idx="30" onclick="oM(30)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(30)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/30-volley-club-arlesien.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/30-volley-club-arlesien-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Volley Club Arlésien</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span></div><p class="pad">&#128205; 3 Boulevard des Lices, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>25% de remise sur l'adhésion et la licence</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="31" onclick="oM(31)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(31)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/31-l-arletiste.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/31-l-arletiste-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">L'Arletiste</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 32 Rue des Suisses, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>10€ offerts dès 50€ d'achat</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>5% de remise dès 20€ d'achat</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="32" onclick="oM(32)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(32)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/32-aromatics.jpg" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="pb"><p class="pn">Aromatics</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 15 Rue de l'Hôtel de Ville, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de réduction sur les plantes et fleurs coupées</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="33" onclick="oM(33)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(33)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/33-odeon.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/33-odeon-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Odéon</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 23 Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise (hors soldes et promotions en cours)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services oneshot relais arles" data-idx="34" onclick="oM(34)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(34)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/34-france-foto.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/34-france-foto-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">France Foto</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 25 Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>2 photos numériques offertes en 10x15</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>5€ de remise sur les séances photo</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="35" onclick="oM(35)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(35)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/35-missa.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/35-missa-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Missa</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 14 Rue Saint Roch, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de réduction (hors soldes et promotions en cours)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services oneshot arles" data-idx="36" onclick="oM(36)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(36)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/36-la-lunetheque.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/36-la-lunetheque-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">La Lunethèque</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span><span class="t to">&#127873; One Shot</span></div><p class="pad">&#128205; 26 Rue des Suisses, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>-20% sur les montures et solaires (jusqu'à 100€ de remise, soit 500€)</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur tout le magasin</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="37" onclick="oM(37)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(37)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/37-les-fromageres.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/37-les-fromageres-logo.jpg" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Les Fromagères</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 30 Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 10% de remise fromagerie<br>&#8211; 15% de remise crémerie</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="38" onclick="oM(38)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(38)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/38-tranquille-thara.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/38-tranquille-thara-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Tranquille Thara</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 21 Rue de la République, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur tout le magasin</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="39" onclick="oM(39)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(39)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/39-librairie-les-grandes-largeurs.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/39-librairie-les-grandes-largeurs-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Librairie Les Grandes Largeurs</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 11 Rue Réattu, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>5% de remise à partir de 30€ d'achat</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="40" onclick="oM(40)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(40)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/40-la-cave-des-saveurs.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/40-la-cave-des-saveurs-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">La Cave des Saveurs</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 25 Rue des Suisses, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur l'ensemble du magasin</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services oneshot relais arles" data-idx="41" onclick="oM(41)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(41)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/41-maison-genin.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/41-maison-genin-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Maison Genin</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span><span class="t to">&#127873; One Shot</span><span class="t tre">&#128205; Point relais</span></div><p class="pad">&#128205; 11 Rue des Porcelets, 13200 Arles</p><div class="coffs"><div class="cof cof-os"><span class="cofl">&#127873; One Shot</span>1 cordon bleu acheté = 1 cordon bleu offert</div><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur toute la boutique</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bienetre arles" data-idx="42" onclick="oM(42)" style="order:6"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(42)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/42-institut-moana.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/42-institut-moana-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Institut Moana</p><p class="pty">Bien-être</p><div class="pts"><span class="t tbe">&#127807; Bien-être</span></div><p class="pad">&#128205; 14 Rue Jouvene, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Soin visage 30 min à 30€ <s>35€</s><br>&#8211; Massage 60 min à 65€ <s>75€</s></div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="43" onclick="oM(43)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(43)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/43-calm-co.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/43-calm-co-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Calm&Co</p><p class="pty">Commerce &amp; Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 36 Place Paul Doumer, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 20% de remise sur toute la gamme cosmétique (limité à un article par achat)<br>&#8211; 3 vapes achetés = 1 offert<br>&#8211; Fleurs : 30€ d'achat = 10€ offert</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services avignon" data-idx="44" onclick="oM(44)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(44)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/44-savon-stories.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/44-savon-stories-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Savon Stories</p><p class="pty">Commerce &amp; Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 38 Rue Carnot, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 20% de remise sur les savons liquides<br>&#8211; 15% de remise sur toute la boutique</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services nimes" data-idx="45" onclick="oM(45)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(45)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/45-les-saveurs-d-auguste.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#1e1e1e;display:flex;align-items:center;justify-content:center"><span style="font-family:var(--fd);font-size:.8rem;font-weight:800;background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">SA</span></div></div><div class="pb"><p class="pn">Les Saveurs d'Auguste</p><p class="pty">Commerce &amp; Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 22 bis Rue de l'Aspic, 30000 Nîmes</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur toute la boutique</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="services arles" data-idx="46" onclick="oM(46)" style="order:5"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(46)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/46-librairie-actes-sud.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/46-librairie-actes-sud-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Librairie Actes Sud</p><p class="pty">Commerce & Boutique</p><div class="pts"><span class="t ts">&#128717; Services</span></div><p class="pad">&#128205; 47 Rue du Docteur Fanton, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur le rayon papeterie et fournitures beaux arts (non cumulable avec une autre remise)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="loisirs arles" data-idx="47" onclick="oM(47)" style="order:4"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(47)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/47-cercle-d-escrime-du-pays-d-armes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/47-cercle-d-escrime-du-pays-d-armes-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Cercle d'Escrime du Pays d'Armes</p><p class="pty">Activité / Loisirs</p><div class="pts"><span class="t tl">&#127919; Loisirs</span></div><p class="pad">&#128205; 3 Boulevard des Lices, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Ton adhésion à 225€ <s>250€</s> ou à 165€ <s>185€</s> si tu es étudiant</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="48" onclick="oM(48)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(48)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/48-l-aire-d-arles.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/48-l-aire-d-arles-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">L'Aire d'Arles</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 25 Rue Porte de Laure, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>20% de remise sur toute la carte</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="49" onclick="oM(49)" style="order:-2"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(49)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/49-oboulaba.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/49-oboulaba-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Oboulaba</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 32 Rond Point des Arènes, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Tous les plats à 10€ (<s>14 à 15,50€</s>)<br>&#8211; Menu boisson + plat + dessert à 15€ (<s>19€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="50" onclick="oM(50)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(50)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/50-gaudina.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/50-gaudina-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Gaudina</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 13 Rue de l'Hôtel de Ville, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>15% de remise sur toute la carte</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration avignon" data-idx="51" onclick="oM(51)" style="order:2"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(51)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/51-regusto.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/51-regusto-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Regusto</p><p class="pty">Glaciers</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 35 Rue du Vieux Sextier, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>15% de remise sur les crêpes, smoothies, glaces, gaufres et snacking</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration avignon" data-idx="52" onclick="oM(52)" style="order:-1"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(52)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/52-le-pili.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/52-le-pili-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Le Pili</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 36 Place des Corps Saints, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Toutes les pizzas à 10€ (<s>12 à 16€</s>)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bienetre avignon" data-idx="53" onclick="oM(53)" style="order:6"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(53)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/53-celine-clement-coiffure.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/53-celine-clement-coiffure-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Céline Clément Coiffure</p><p class="pty">Bien-être</p><div class="pts"><span class="t tbe">&#127807; Bien-être</span></div><p class="pad">&#128205; 28 Place du Portail Matheron, 84000 Avignon</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>10% de remise sur les prestations (hors ventes produits, promotions en cours, lissage brésilien, soin au botox)</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bienetre arles" data-idx="54" onclick="oM(54)" style="order:6"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(54)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/54-jolie-piqure.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/54-jolie-piqure-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Jolie Piqûre</p><p class="pty">Bien-être</p><div class="pts"><span class="t tbe">&#127807; Bien-être</span></div><p class="pad">&#128205; 16 Rue de la Verrerie, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>Pour toute prestation d'un tatouage d'un montant minimum de 200€, un petit tatouage supplémentaire est offert, au choix : un petit motif simple et minimaliste ou un lettrage court.</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bienetre arles" data-idx="55" onclick="oM(55)" style="order:6"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(55)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/55-13-encres.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/55-13-encres-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">13 encrés</p><p class="pty">Bien-être</p><div class="pts"><span class="t tbe">&#127807; Bien-être</span></div><p class="pad">&#128205; 55 Rue du 4 Septembre, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; Piercing : 20% sur le 2ème, 30% sur le 3ème<br>&#8211; Bijouterie : 15% sur tous les bijoux<br>&#8211; Tatouage : 10% sur le 2ème tatouage ou sur ton tatouage si tu viens avec quelqu'un qui se fait également tatouer</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="restauration arles" data-idx="56" onclick="oM(56)" style="order:0"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(56)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/56-dimmui.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/56-dimmui-logo.jpg" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">DimMui</p><p class="pty">Restaurant</p><div class="pts"><span class="t tr">&#127828; Restauration</span></div><p class="pad">&#128205; 22 Rue de l'Hôtel de Ville, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>&#8211; 15% de remise sur tous les plats à emporter<br>&#8211; 15% de remise sur le plat du jour sur place</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="pc" data-c="bienetre arles" data-idx="57" onclick="oM(57)" style="order:6"><button class="fav-btn" onclick="event.stopPropagation();toggleFav(57)" aria-label="Ajouter aux favoris">&#9825;</button><div class="plw" style="padding:0;position:relative;overflow:hidden;height:205px;background:#111"><img loading="lazy" decoding="async" src="img/partners/57-victoria-dermo.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;bottom:8px;right:8px;width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(255,255,255,.85);box-shadow:0 2px 8px rgba(0,0,0,.4);background:#fff"><img loading="lazy" decoding="async" src="img/partners/57-victoria-dermo-logo.png" style="width:100%;height:100%;object-fit:cover"></div></div><div class="pb"><p class="pn">Victoria Dermo</p><p class="pty">Bien-être</p><div class="pts"><span class="t tbe">&#127807; Bien-être</span></div><p class="pad">&#128205; 16 Rue de la Verrerie, 13200 Arles</p><div class="coffs"><div class="cof cof-pm"><span class="cofl">&#9989; Offre permanente</span>5€ de remise sur la pose de 3 strass dentaires ou plus</div></div><p class="sm">Voir les conditions &#8594;</p></div></div>
+<div class="nores" id="nores">Aucun partenaire dans cette catégorie.</div>
+  </div>
+</section>
+
+<section id="map-section">
+  <div class="sl">Localisation</div>
+  <h2>Tous tes spots sur la carte</h2>
+  <p class="si">Retrouve tous nos partenaires à Arles, Avignon, Nîmes et leurs alentours.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+    <button class="fb map-fb on" onclick="filtMap('all',this)">Tous</button>
+    <button class="fb map-fb" onclick="filtMap('oneshot',this)">&#127873; One Shot</button>
+    <button class="fb map-fb" id="map-fav-btn" onclick="filtMap('favoris',this)">&#9825; Mes favoris</button>
+    <button class="fb map-fb" onclick="filtMap('Restaurant',this)">&#127828; Restos</button>
+    <button class="fb map-fb" onclick="filtMap('Boulangerie',this)">&#129360; Boulangeries</button>
+    <button class="fb map-fb" onclick="filtMap('Café / Brunch',this)">&#9749; Cafés</button>
+    <button class="fb map-fb" onclick="filtMap('Bar',this)">&#127866; Bars</button>
+    <button class="fb map-fb" onclick="filtMap('Commerce & Boutique',this)">&#128717; Commerces</button>
+    <button class="fb map-fb" onclick="filtMap('Activité / Loisirs',this)">&#127919; Loisirs</button>
+    <button class="fb map-fb" onclick="filtMap('Bien-être',this)">&#127807; Bien-être</button>
+  </div>
+  <div class="geo-wrap">
+    <button class="geo-btn" id="geo-btn" onclick="locateMe()">&#128205; Me localiser &amp; trier par proximité</button>
+  </div>
+  <div id="map"></div>
+  <div id="map-nores" class="nores" style="display:none">Aucun partenaire dans cette catégorie.</div>
+</section>
+
+<section id="tarif">
+  <div class="sl">Tarif</div>
+  <h2>Un prix, tout inclus</h2>
+  <p class="si">Valable jusqu'au 31 août 2027, quelle que soit ta date d'achat.</p>
+  <div class="pwrap">
+    <div class="pbox">
+      <div class="plbl">Pass Arena - saison 2026-2027</div>
+      <div class="pamt">14,99€</div>
+      <div class="pper">valable jusqu'au 31 août 2027</div>
+      <ul class="pfeat">
+        <li><span class="chk">&#10003;</span>Accès à tous nos partenaires</li>
+        <li><span class="chk">&#10003;</span>Nouveaux spots ajoutés régulièrement</li>
+        <li><span class="chk">&#10003;</span>Carte physique nominative</li>
+        <li><span class="chk">&#10003;</span>Réductions immédiates, sans appli</li>
+        <li><span class="chk">&#10003;</span>Achetable à tout moment de la saison</li>
+        <li><span class="chk">&#10003;</span>Réservé aux 18-30 ans inclus</li>
+      </ul>
+      <a class="pbtn" href="https://buy.stripe.com/6oU9AV94L5IhcDv37K63K00" style="display:block;text-align:center;text-decoration:none;box-sizing:border-box">&#128274; Commander ma carte - 14,99€</a>
+      <div style="color:var(--mu);font-size:.78rem;text-align:center;margin-top:10px">Paiement sécurisé</div>
+    </div>
+    <div class="pside">
+      <p>La carte est achetable à tout moment et reste valable jusqu'au 31 août 2027 quelle que soit la date d'achat.</p>
+      <p>Commerçant ? <strong style="color:var(--tx)">La mise en avant sur Pass Arena est entièrement gratuite.</strong></p>
+      <p style="font-size:.82rem;color:#555">Paiement en ligne bientôt disponible. En attendant : <a href="mailto:passarena1@gmail.com" style="color:#9b59b6">passarena1@gmail.com</a></p>
+    </div>
+  </div>
+  <div style="margin-top:60px">
+    <div class="sl">Retrait de la carte</div>
+    <h2 style="font-size:clamp(1.4rem,3vw,2rem);margin-bottom:12px">Choisis ton point de retrait</h2>
+    <div class="rgrid">
+      <div class="rc"><div class="ri">&#127978;</div><div class="rt">Commerçant partenaire</div><div class="rd">Chez un de nos partenaires points relais.</div></div>
+      <div class="rc"><div class="ri">&#129309;</div><div class="rt">Main propre</div><div class="rd">Directement avec l'équipe Pass Arena sur rendez-vous.</div></div>
+    </div>
+    <div class="rnote">&#9888; <strong>Important :</strong> pièce d'identité obligatoire au moment du retrait. Tu dois avoir entre 18 et 30 ans inclus. Aucun remboursement en cas de non-conformité d'âge.</div>
+  </div>
+</section>
+
+<section id="rejoindre">
+  <div class="jgrid">
+    <div>
+      <div class="sl">Commerçants</div>
+      <h2>Rejoins le réseau Pass Arena</h2>
+      <p class="si" style="margin-bottom:20px">Référence-toi gratuitement et accueille une clientèle jeune et motivée.</p>
+      <ul class="jlist">
+        <li><span class="jn">0€</span><span>Inscription totalement gratuite.</span></li>
+        <li><span class="jn">+&#128101;</span><span>Attire une clientèle 18-30 ans directement chez toi.</span></li>
+        <li><span class="jn">&#128226;</span><span>Visibilité sur notre site, nos réseaux et notre carte.</span></li>
+        <li><span class="jn">&#129309;</span><span>Tu choisis toi-même l'offre que tu proposes.</span></li>
+      </ul>
+    </div>
+    <div class="cf">
+      <h3>Demande de partenariat</h3>
+      <form id="pform" action="https://formspree.io/f/xgawkwrv" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de partenariat Pass Arena">
+        <div class="fg"><label>Nom du commerce *</label><input type="text" name="commerce" placeholder="Ex : La Belle Arles" required></div>
+        <div class="fg"><label>Adresse *</label><input type="text" name="adresse" placeholder="Rue, ville" required></div>
+        <div class="fg"><label>Type d'activité *</label><select name="type" required><option value="">Sélectionner...</option><option>Restaurant / Bar</option><option>Café / Brunch</option><option>Commerce &amp; boutique</option><option>Activité / Loisirs</option><option>Beauté &amp; Bien-être</option><option>Boulangerie</option><option>Autre</option></select></div>
+        <div class="fg"><label>Votre email *</label><input type="email" name="email" placeholder="prenom@exemple.com" required></div>
+        <div class="fg"><label>Votre téléphone</label><input type="tel" name="telephone" placeholder="06 xx xx xx xx"></div>
+        <div class="fg"><label>Offre envisagée</label><textarea rows="2" name="offre" placeholder="Ex : -25%, boisson offerte..."></textarea></div>
+        <div class="fg" style="margin-bottom:14px">
+          <label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:.82rem;color:#888;line-height:1.5">
+            <input type="checkbox" name="rgpd" required style="width:auto;margin-top:3px;flex-shrink:0;accent-color:#9b59b6">
+            <span>J'accepte que mes données soient traitées par Pass Arena SAS pour traiter ma demande de partenariat, conformément à la <a href="#" onclick="event.preventDefault();document.getElementById('pc-modal').style.display='flex';document.body.style.overflow='hidden'" style="color:#9b59b6">politique de confidentialité</a>. *</span>
+          </label>
+        </div>
+        <button type="submit" class="fsub" id="pfbtn">Envoyer ma demande</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="sl">FAQ</div>
+  <h2>Questions fréquentes</h2>
+  <div class="fwrap">
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Qui peut avoir le Pass Arena ?<span class="ficon">+</span></button><div class="fa">Le Pass Arena est réservé aux jeunes ayant entre 18 et 30 ans inclus au moment du retrait. Une pièce d'identité valide est obligatoire. En cas de non-conformité d'âge, aucun remboursement ne sera effectué.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Quand est valable la carte ?<span class="ficon">+</span></button><div class="fa">La carte Pass Arena est valable du 15 septembre 2026 au 31 août 2027, quelle que soit ta date d'achat.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Puis-je acheter la carte après le 15 septembre ?<span class="ficon">+</span></button><div class="fa">Oui ! La carte est disponible tout au long de la saison et reste valable jusqu'au 31 août 2027 quelle que soit ta date d'achat.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Comment récupérer ma carte ?<span class="ficon">+</span></button><div class="fa">Après l'achat, tu choisis ton point de retrait parmi nos partenaires points relais ou directement avec l'équipe Pass Arena sur rendez-vous. Ta pièce d'identité sera obligatoirement demandée.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Comment fonctionnent les réductions ?<span class="ficon">+</span></button><div class="fa">Tu présentes ta carte physique Pass Arena à la caisse du partenaire. La réduction est appliquée immédiatement, sans appli ni QR code.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">C'est quoi une offre One Shot ?<span class="ficon">+</span></button><div class="fa">Une offre One Shot est valable une seule fois pendant toute la durée de ta carte. Elle est souvent plus avantageuse qu'une offre permanente.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">La carte est-elle remboursable ?<span class="ficon">+</span></button><div class="fa">Non, la carte Pass Arena n'est pas remboursable. Il n'y a pas de délai de rétractation. La carte est nominative et non cessible. Aucun remboursement ne sera effectué, y compris en cas de non-conformité d'âge.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">De nouveaux partenaires seront-ils ajoutés ?<span class="ficon">+</span></button><div class="fa">Oui ! Le réseau grandit régulièrement. Tu profites automatiquement de tous les nouveaux spots pendant ta période de validité.</div></div>
+    <div class="fi"><button class="fq" onclick="tFaq(this)">Je suis commerçant, combien ça coûte ?<span class="ficon">+</span></button><div class="fa">Absolument rien. Le référencement est totalement gratuit. Nous nous rémunérons uniquement sur la vente des cartes aux jeunes.</div></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sl">Contact</div>
+  <h2>On est là pour toi</h2>
+  <div class="cgrid">
+    <div class="ci">
+      <h3>Nous contacter</h3>
+      <div class="cit"><div class="cic">&#128231;</div><a href="mailto:passarena1@gmail.com">passarena1@gmail.com</a></div>
+      <div class="cit"><div class="cic">&#128241;</div><a href="tel:+33768022042">07 68 02 20 42</a></div>
+      <div class="cit"><div class="cic">&#128241;</div><a href="tel:+33760342347">07 60 34 23 47</a></div>
+      <div class="cit"><div class="cic">&#128205;</div><span>44 rue Voltaire, 13200 Arles</span></div>
+      <div class="cit"><div class="cic">&#128247;</div><a href="https://www.instagram.com/pass.arena" target="_blank">@pass.arena sur Instagram</a></div>
+      <div class="cit"><div class="cic">&#127925;</div><a href="https://www.tiktok.com/@pass.arena" target="_blank">@pass.arena sur TikTok</a></div>
+    </div>
+    <div class="ci">
+      <h3>Suivez-nous</h3>
+      <p style="color:var(--mu);font-size:.9rem;line-height:1.7;margin-bottom:20px">Retrouvez nos actualités et les coulisses de Pass Arena sur nos réseaux sociaux.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://www.instagram.com/pass.arena" target="_blank" class="bp" style="font-size:.85rem;padding:10px 22px">&#128247; Instagram</a>
+        <a href="https://www.tiktok.com/@pass.arena" target="_blank" class="bo" style="font-size:.85rem;padding:10px 22px">&#127925; TikTok</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fg2">
+    <div class="fbrand">
+      <div class="flogo"><img src="img/logo.png" alt="Pass Arena"><span>PASS ARENA</span></div>
+      <p class="fdesc">La carte de réductions pour les 18-30 ans inclus à Arles, Nîmes, Avignon et leurs alentours. Valable jusqu'au 31 août 2027.</p>
+      <div class="fsoc">
+        <a class="fsl" href="https://www.instagram.com/pass.arena" target="_blank">&#128247;</a>
+        <a class="fsl" href="https://www.tiktok.com/@pass.arena" target="_blank">&#127925;</a>
+      </div>
+    </div>
+    <div class="fcol">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#comment">Comment ça marche</a></li>
+        <li><a href="#partenaires">Nos partenaires</a></li>
+        <li><a href="#map-section">Carte GPS</a></li>
+        <li><a href="#tarif">Tarif &amp; retrait</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('ml-modal').style.display='flex';document.body.style.overflow='hidden'">Mentions légales</a></li>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('cgv-modal').style.display='flex';document.body.style.overflow='hidden'">CGV</a></li>
+        <li><a href="#" onclick="event.preventDefault();document.getElementById('pc-modal').style.display='flex';document.body.style.overflow='hidden'">Politique de confidentialité</a></li>
+      </ul>
+      <div style="margin-top:22px"><h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:passarena1@gmail.com">passarena1@gmail.com</a></li>
+          <li><a href="tel:+33768022042">07 68 02 20 42</a></li>
+          <li><a href="tel:+33760342347">07 60 34 23 47</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>&copy; 2026 Pass Arena SAS &middot; Tous droits réservés &middot; 44 rue Voltaire, 13200 Arles</span>
+    <span>Fait avec &#10084;&#65039; à Arles</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var PD=[
+{n:"O Jinko",t:"Restaurant",a:"8 Place Paul Doumer, 13200 Arles",os:"",pm:"Plat du jour à 15€ <s>18€</s> sur place, ou à 13,50€ <s>15€</s> à emporter",c:"Plat du jour à 15€ au lieu de 18€ sur place, ou à 13,50€ au lieu de 15€ à emporter. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Sotheary",t:"Restaurant",a:"28 Rue Voltaire, 13200 Arles",os:"Menu spécial à 10€ (6 makis, 1 salade de chou, 1 canette 33cl)",pm:"Formule Express 12€ : 1 plat + 1 dessert — Menu Campus 14€ : Krousty poulet + 2 nems",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"La Relève FoodTruck",t:"Restaurant",a:"Boulevard des Lices, 13200 Arles",os:"",pm:"1 Smash Burger et Frites achetés = 4 churros offerts",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Chez Nono",t:"Restaurant",a:"10 Bis Rue du 4 Septembre, 13200 Arles",os:"1 Galette achetée = 1 Dessert Offert",pm:"1 Galette achetée = 1 Gâteau maison offert — 1 Menu Panini acheté = 1 canette offerte — Toutes les salades à 15€",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Blue Note",t:"Restaurant",a:"12 Rue du 4 Septembre, 13200 Arles",os:"Un burger acheté = Frites et boisson offerts",pm:"Pour un menu acheté = 1 dessert maison offert ou 10% de réduction",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Maxi Grill",t:"Restaurant",a:"54 Rue du 4 Septembre, 13200 Arles",os:"",pm:"Un sandwich, burger ou tacos acheté = frites offertes",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Le Coin des Amis",t:"Restaurant",a:"65 Cours Hyacinthe Bellon, 13990 Fontvieille",os:"",pm:"Dessert du jour offert pour 15€ de consommation",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Tonton Sam",t:"Restaurant",a:"10 Rue de l'Hôtel de Ville, 13200 Arles",os:"",pm:"10% de réduction",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"SuperFood",t:"Restaurant",a:"6 Rue Molière, 13200 Arles",os:"Sandwich, wrap ou salade acheté = le 2ème offert",pm:"10% de réduction sur toute la carte",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Plage Plage",t:"Restaurant / Glaciers",a:"6 Rue de la Cavalerie, 13200 Arles",os:"1 cookie, soft, affogato ou glace acheté = le même produit offert",pm:"Glace 2 boules à 5€ <s>6€</s> — Menu galette à 15€ <s>19€</s>",c:"Glace 2 boules à 5€ au lieu de 6€ — Menu galette à 15€ au lieu de 19€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Le Petit Arles",t:"Restaurant",a:"29 Rue de l'Hôtel de Ville, 13200 Arles",os:"1 croque ou quiche achetés = 1 offert du même produit",pm:"1 croque monsieur ou une crêpe classique achetés = 1 dessert offert (hors cookies)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Mecha Uma",t:"Restaurant",a:"Arles, Avignon, Saint-Rémy-de-Provence",os:"",pm:"1 Ramen acheté = 3 toppings offerts (15€ <s>19,50€</s>)",c:"1 Ramen acheté = 3 toppings offerts (15€ au lieu de 19,50€). Valable dans les 3 établissements : 6 Rue Favorin Arles, 29 Rue du Vieux Sextier Avignon, 15 Av. de la Libération Saint-Rémy. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Arles Pizza",t:"Restaurant",a:"18 Rue des Porcelets, 13200 Arles",os:"",pm:"1 Pizza achetée = 1 canette (hors Red Bull) — 2 Pizzas achetées = 3ème à -50%",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Arelatis",t:"Glaciers",a:"8 Place du Forum / 1 Rue Jean Jaurès, 13200 Arles",os:"",pm:"2,50€ la boule <s>3€</s> — 2 boules achetées = 1 topping offert",c:"2,50€ la boule au lieu de 3€ — 2 boules achetées = 1 topping offert. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Midi Nomique",t:"Restaurant",a:"19 Bis Rue de la République, 13200 Arles",os:"",pm:"1 sandwich acheté = boisson offerte — ou -2€ sur la formule sandwich + dessert + boisson à 12,90€ (<s>14,90€</s>)",c:"1 sandwich acheté = boisson offerte — ou -2€ sur la formule sandwich + dessert + boisson à 12,90€ au lieu de 14,90€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Nachos",t:"Restaurant",a:"16 Place Pie, 84000 Avignon",os:"Crispy offert (Nachos + sauce cheesy maison + crispy bacon) sans contrepartie d'achat",pm:"Menu plat + boisson + dessert au prix du menu plat + boisson",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Mon Chou",t:"Café / Brunch",a:"3 Place Voltaire, 13200 Arles",os:"20% de réduction sur toute la note (valable également pour les non-porteurs)",pm:"1 breakfast, brunch ou lunch acheté = le 2ème à -50%",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. L'offre de 20% de réduction sur la note est valable pour tous, porteurs ou non de la carte. L'offre du 2ème breakfast, brunch ou lunch à -50% est réservée au porteur de la carte.",r:false},
+{n:"Cloé Brunch",t:"Café / Brunch",a:"13 Place Voltaire, 13200 Arles",os:"Un pancake salé acheté = un pancake sucré offert",pm:"Un brunch salé ou sucré acheté = 1 pâtisserie ou boisson offerts (hors mocktails, jus pressé, citronnade, matcha et macchiatos)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Au Café",t:"Café / Brunch",a:"7 Rue des Petits Souliers, 30000 Nîmes",os:"",pm:"Formule Spéciale à 10€ (2 pancakes salés + 1 salade + 1 canette ou café)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Honoré",t:"Café / Brunch",a:"L'Isle-sur-la-Sorgue / Saint-Rémy-de-Provence",os:"",pm:"1 plat acheté = 1 boisson chaude offerte (dans la limite d'une boisson par carte)",c:"11 Av. des 4 Otages, L'Isle-sur-la-Sorgue / 3 Bd Mirabeau, Saint-Rémy. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Gonflé",t:"Boulangerie",a:"27 Rue Saint-Agricol, 84000 Avignon",os:"",pm:"10% de réduction",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Peach",t:"Boulangerie",a:"2 Rue de la République, 13200 Arles",os:"",pm:"Formule Sandwich + cookie/financier + canette/eau à 8€ <s>9,50€</s> + 1 café offert — 10% sur la formule petit-déjeuner",c:"Formule Sandwich + cookie/financier + canette/eau à 8€ au lieu de 9,50€ + 1 café offert — 10% sur la formule petit-déjeuner. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"La Féria du Pain",t:"Boulangerie",a:"18 Avenue Victor Hugo, 13200 Arles",os:"",pm:"2 portions Pizza ou Focaccia + eau ou canette à 5€ <s>6,40€</s> — Café + Croissant à 2€ <s>2,50€</s>",c:"2 portions Pizza ou Focaccia + eau ou canette à 5€ au lieu de 6,40€ — Café + Croissant à 2€ au lieu de 2,50€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"L'Antidote",t:"Bar",a:"16 Rue de la Liberté, 13200 Arles",os:"",pm:"15% de réduction sur les bières pression et les softs (hors féria)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"La Planque",t:"Bar",a:"19 Rue des Lices, 84000 Avignon",os:"",pm:"Happy Hour permanent : bière blonde 3,50€ le demi (<s>4€</s>) et 6,50€ la pinte (<s>7,50€</s>) — Limonade pression 2,50€ le demi (<s>3€</s>) et 4,50€ la pinte (<s>5€</s>)",c:"Happy Hour permanent : bière blonde 3,50€ le demi au lieu de 4€ et 6,50€ la pinte au lieu de 7,50€ — Limonade pression 2,50€ le demi au lieu de 3€ et 4,50€ la pinte au lieu de 5€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Get Back Escape Game",t:"Activité / Loisirs",a:"14 Rue Joseph Rainard, 13200 Arles",os:"",pm:"10% de remise via le code ARENA10% (hors équipe de 2).",c:"Réservation en ligne uniquement via le code ARENA10%. Présentation de la carte Pass Arena et d'une pièce d'identité au même nom obligatoire sur place. Offre réservée au porteur de la carte.",r:false},
+{n:"L'Enfance de l'Art",t:"Activité / Loisirs",a:"20 Rue Emile Jamais, 30900 Nîmes",os:"",pm:"100€ les 4 séances d'atelier peinture individuel de 2H <s>175€</s>",c:"1 mois, 1 séance/semaine. 100€ les 4 séances d'atelier peinture individuel de 2H au lieu de 175€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Lou Delahaye",t:"Activité / Loisirs",a:"44 Rue Voltaire, 13200 Arles",os:"50% de remise sur le premier cours",pm:"2 cours achetés = le 3ème offert",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Baptiste Achard",t:"Activité / Loisirs",a:"44 Rue Voltaire, 13200 Arles",os:"",pm:"80€ le programme d'un mois (<s>120€</s>)",c:"80€ le programme d'un mois au lieu de 120€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Sprinter Club Arlésien",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles",os:"",pm:"10€ de remise sur l'adhésion (80€ <s>90€</s>)",c:"10€ de remise sur l'adhésion (80€ au lieu de 90€). Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Volley Club Arlésien",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles",os:"",pm:"25% de remise sur l'adhésion et la licence",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"L'Arletiste",t:"Commerce & Boutique",a:"32 Rue des Suisses, 13200 Arles",os:"10€ offerts dès 50€ d'achat",pm:"5% de remise dès 20€ d'achat",c:"Hors livre, cartes cadeaux, ateliers et promotions en cours. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Aromatics",t:"Commerce & Boutique",a:"15 Rue de l'Hôtel de Ville, 13200 Arles",os:"",pm:"10% de réduction sur les plantes et fleurs coupées",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Odéon",t:"Commerce & Boutique",a:"23 Rue de la République, 13200 Arles",os:"",pm:"10% de remise (hors soldes et promotions en cours)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"France Foto",t:"Commerce & Boutique",a:"25 Rue de la République, 13200 Arles",os:"2 photos numériques offertes en 10x15",pm:"5€ de remise sur les séances photo",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Missa",t:"Commerce & Boutique",a:"14 Rue Saint Roch, 13200 Arles",os:"",pm:"10% de réduction (hors soldes et promotions en cours)",c:"Hors soldes et promotions en cours. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"La Lunethèque",t:"Commerce & Boutique",a:"26 Rue des Suisses, 13200 Arles",os:"-20% sur les montures et solaires (jusqu'à 100€ de remise, soit 500€)",pm:"10% de remise sur tout le magasin",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Les Fromagères",t:"Commerce & Boutique",a:"30 Rue de la République, 13200 Arles",os:"",pm:"10% de remise fromagerie — 15% de remise crémerie",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Tranquille Thara",t:"Commerce & Boutique",a:"21 Rue de la République, 13200 Arles",os:"",pm:"10% de remise sur tout le magasin",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Librairie Les Grandes Largeurs",t:"Commerce & Boutique",a:"11 Rue Réattu, 13200 Arles",os:"",pm:"5% de remise à partir de 30€ d'achat",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"La Cave des Saveurs",t:"Commerce & Boutique",a:"25 Rue des Suisses, 13200 Arles",os:"",pm:"10% de remise sur l'ensemble du magasin",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Maison Genin",t:"Commerce & Boutique",a:"11 Rue des Porcelets, 13200 Arles",os:"1 cordon bleu acheté = 1 cordon bleu offert",pm:"10% de remise sur toute la boutique",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:true},
+{n:"Institut Moana",t:"Bien-être",a:"14 Rue Jouvene, 13200 Arles",os:"",pm:"Soin visage 30 min à 30€ <s>35€</s> — Massage 60 min à 65€ <s>75€</s>",c:"Soin visage 30 min à 30€ au lieu de 35€ — Massage 60 min à 65€ au lieu de 75€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Calm&Co",t:"Commerce & Boutique",a:"36 Place Paul Doumer, 13200 Arles",os:"",pm:"20% de remise sur toute la gamme cosmétique (limité à un article par achat) — 3 vapes achetés = 1 offert — Fleurs : 30€ d'achat = 10€ offert",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Savon Stories",t:"Commerce & Boutique",a:"38 Rue Carnot, 84000 Avignon",os:"",pm:"20% de remise sur les savons liquides — 15% de remise sur toute la boutique",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Les Saveurs d'Auguste",t:"Commerce & Boutique",a:"22 bis Rue de l'Aspic, 30000 Nîmes",os:"",pm:"10% de remise sur toute la boutique",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Librairie Actes Sud",t:"Commerce & Boutique",a:"47 Rue du Docteur Fanton, 13200 Arles",os:"",pm:"10% de remise sur le rayon papeterie et fournitures beaux arts (non cumulable avec une autre remise)",c:"Valable sur présentation de la carte Pass Arena.",r:false},
+{n:"Cercle d'Escrime du Pays d'Armes",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles",os:"",pm:"Ton adhésion à 225€ <s>250€</s> ou à 165€ <s>185€</s> si tu es étudiant",c:"Ton adhésion à 225€ au lieu de 250€ ou à 165€ au lieu de 185€ si tu es étudiant. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"L'Aire d'Arles",t:"Restaurant",a:"25 Rue Porte de Laure, 13200 Arles",os:"",pm:"20% de remise sur toute la carte",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Oboulaba",t:"Restaurant",a:"32 Rond Point des Arènes, 13200 Arles",os:"",pm:"Tous les plats à 10€ (<s>14 à 15,50€</s>) — Menu boisson + plat + dessert à 15€ (<s>19€</s>)",c:"Tous les plats à 10€ au lieu de 14 à 15,50€ — Menu boisson + plat + dessert à 15€ au lieu de 19€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Gaudina",t:"Restaurant",a:"13 Rue de l'Hôtel de Ville, 13200 Arles",os:"",pm:"15% de remise sur toute la carte",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Regusto",t:"Glaciers",a:"35 Rue du Vieux Sextier, 84000 Avignon",os:"",pm:"15% de remise sur les crêpes, smoothies, glaces, gaufres et snacking",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Le Pili",t:"Restaurant",a:"36 Place des Corps Saints, 84000 Avignon",os:"",pm:"Toutes les pizzas à 10€ (<s>12 à 16€</s>)",c:"Toutes les pizzas à 10€ au lieu de 12 à 16€. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Céline Clément Coiffure",t:"Bien-être",a:"28 Place du Portail Matheron, 84000 Avignon",os:"",pm:"10% de remise sur les prestations (hors ventes produits, promotions en cours, lissage brésilien, soin au botox)",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Jolie Piqûre",t:"Bien-être",a:"16 Rue de la Verrerie, 13200 Arles",os:"",pm:"Pour toute prestation d'un tatouage d'un montant minimum de 200€, un petit tatouage supplémentaire est offert, au choix : un petit motif simple et minimaliste ou un lettrage court.",c:"Le tatouage offert devra être réalisé au cours de la même séance que la prestation principale et sera soumis à validation préalable de la tatoueuse notamment en fonction de sa taille, de sa complexité et de son emplacement. Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"13 encrés",t:"Bien-être",a:"55 Rue du 4 Septembre, 13200 Arles",os:"",pm:"Piercing : 20% sur le 2ème, 30% sur le 3ème — Bijouterie : 15% sur tous les bijoux — Tatouage : 10% sur le 2ème tatouage ou sur ton tatouage si tu viens avec quelqu'un qui se fait également tatouer",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"DimMui",t:"Restaurant",a:"22 Rue de l'Hôtel de Ville, 13200 Arles",os:"",pm:"15% de remise sur tous les plats à emporter — 15% de remise sur le plat du jour sur place",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false},
+{n:"Victoria Dermo",t:"Bien-être",a:"16 Rue de la Verrerie, 13200 Arles",os:"",pm:"5€ de remise sur la pose de 3 strass dentaires ou plus",c:"Valable sur présentation de la carte Pass Arena et d'une pièce d'identité au même nom. Offre réservée au porteur de la carte.",r:false}
+];
+
+function oM(idx) {
+  var p = PD[idx];
+  if (!p) return;
+  var allCards = document.querySelectorAll('.pc');
+  var card = allCards[idx];
+  var logoEl = card ? card.querySelector('.pl') : null;
+  var logoHtml = '';
+  if (logoEl) {
+    var cl = logoEl.cloneNode(true);
+    cl.className = 'mlg';
+    logoHtml = cl.outerHTML;
+  }
+  var cats = card ? (card.dataset.c || '') : '';
+  var tags = '';
+  if (cats.indexOf('restauration') >= 0) tags += '<span class="t tr">&#127828; Restauration</span>';
+  if (cats.indexOf('bars') >= 0) tags += '<span class="t tb">&#127866; Bar</span>';
+  if (cats.indexOf('brunch') >= 0) tags += '<span class="t tca">&#9749; Café / Brunch</span>';
+  if (cats.indexOf('loisirs') >= 0) tags += '<span class="t tl">&#127919; Loisirs</span>';
+  if (cats.indexOf('services') >= 0) tags += '<span class="t ts">&#128717; Services</span>';
+  if (cats.indexOf('bienetre') >= 0) tags += '<span class="t tbe">&#127807; Bien-être</span>';
+  if (cats.indexOf('oneshot') >= 0) tags += '<span class="t to">&#127873; One Shot</span>';
+  if (p.r) tags += '<span class="t tre">&#128205; Point relais</span>';
+  var offs = '';
+  if (p.os) offs += '<div class="moff mos" style="border:2px solid #f7971e;box-shadow:0 0 12px rgba(247,151,30,.3)"><div class="moh" style="font-size:.8rem;display:flex;align-items:center;gap:6px">&#127873; Offre One Shot <span class="mbg">valable 1 fois</span></div><div class="mot">'+p.os+'</div></div>';
+  if (p.pm) offs += '<div class="moff mpm"><div class="moh">Offre Permanente</div><div class="mot">'+p.pm+'</div></div>';
+  if (!offs) offs = '<p style="color:var(--mu);text-align:center;padding:20px 0">Offre à venir</p>';
+  document.getElementById('mc').innerHTML =
+    '<div class="mlw">'+logoHtml+'</div>'+
+    '<div class="mname">'+p.n+'</div>'+
+    '<div class="mtype">'+p.t+'</div>'+
+    '<div class="maddr">&#128205; '+p.a+'</div>'+
+    '<div class="mtags">'+tags+'</div>'+
+    offs+
+    '<div class="mcond">&#8505;&#65039; '+p.c+'</div>'+
+    '<div class="mactions">'+
+    '<button class="mfav" id="mfav-btn" data-idx="'+idx+'" onclick="toggleFav('+idx+')">&#9825; Favoris</button>'+
+    '<a class="mdir" href="https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(p.a)+'" target="_blank" rel="noopener">&#129517; Itinéraire</a>'+
+    '</div>'+
+    '<button class="mshare" id="mshare-btn" onclick="shareCard('+idx+')">&#128228; Partager cette offre</button>';
+  document.getElementById('ov').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  updateFavUI();
+}
+function cM() { document.getElementById('ov').style.display='none'; document.body.style.overflow=''; }
+document.getElementById('ov').addEventListener('click', function(e) { if(e.target===this) cM(); });
+function shareCard(idx) {
+  var p = PD[idx];
+  if (!p) return;
+  var url = location.origin + location.pathname + '#carte=' + idx;
+  var offerText = p.os || p.pm || '';
+  var text = p.n + ' : ' + offerText + ' avec la carte Pass Arena ❤️';
+  var btn = document.getElementById('mshare-btn');
+  function flash(msg) {
+    if (!btn) return;
+    var old = btn.innerHTML;
+    btn.innerHTML = msg;
+    setTimeout(function () { btn.innerHTML = old; }, 2000);
+  }
+  if (navigator.share) {
+    navigator.share({ title: 'Pass Arena - ' + p.n, text: text, url: url }).catch(function () {});
+  } else if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function () {
+      flash('✅ Lien copié !');
+    }).catch(function () {
+      prompt('Copiez ce lien pour le partager :', url);
+    });
+  } else {
+    prompt('Copiez ce lien pour le partager :', url);
+  }
+}
+(function () {
+  var m = location.hash.match(/carte=(\d+)/);
+  if (m) {
+    var idx = parseInt(m[1], 10);
+    if (PD[idx]) {
+      setTimeout(function () {
+        oM(idx);
+        var grid = document.getElementById('pgrid') || document.getElementById('partenaires');
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }
+})();
+
+var activeCat = 'all';
+var activeVille = '';
+var activeSearch = '';
+
+function normalizeTxt(s) {
+  return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function onSearch(val) {
+  activeSearch = normalizeTxt(val);
+  document.getElementById('psearch-clear').style.display = val ? 'flex' : 'none';
+  applyFilters();
+}
+
+function clearSearch() {
+  var input = document.getElementById('psearch');
+  input.value = '';
+  activeSearch = '';
+  document.getElementById('psearch-clear').style.display = 'none';
+  applyFilters();
+  input.focus();
+}
+
+function filt(btn) {
+  var cat = btn.dataset.f;
+  activeCat = cat;
+  // Update cat button styles (not ville buttons)
+  document.querySelectorAll('.fb:not(.ville-btn)').forEach(function(b) { b.classList.remove('on'); });
+  btn.classList.add('on');
+  applyFilters();
+}
+
+function filtV(btn) {
+  var v = btn.dataset.v;
+  if (activeVille === v) {
+    // Toggle off
+    activeVille = '';
+    btn.classList.remove('on');
+  } else {
+    activeVille = v;
+    document.querySelectorAll('.ville-btn').forEach(function(b) { b.classList.remove('on'); });
+    btn.classList.add('on');
+  }
+  applyFilters();
+}
+
+function applyFilters() {
+  var cards = document.querySelectorAll('.pc');
+  var vis = 0;
+  cards.forEach(function(c) {
+    var cats = c.dataset.c || '';
+    var catList = cats.split(' ');
+    var catOk;
+    if (activeCat === 'all') catOk = true;
+    else if (activeCat === 'favoris') catOk = isFav(parseInt(c.dataset.idx, 10));
+    else catOk = catList.indexOf(activeCat) !== -1;
+    var villeOk = (activeVille === '') || (catList.indexOf(activeVille) !== -1);
+    var searchOk = true;
+    if (activeSearch) {
+      var nameEl = c.querySelector('.pn');
+      var name = nameEl ? normalizeTxt(nameEl.textContent) : '';
+      searchOk = name.indexOf(activeSearch) !== -1;
+    }
+    var show = catOk && villeOk && searchOk;
+    c.style.display = show ? '' : 'none';
+    if (show) vis++;
+  });
+  var nores = document.getElementById('nores');
+  if (vis === 0) {
+    nores.textContent = activeSearch
+      ? 'Aucun partenaire ne correspond à « ' + document.getElementById('psearch').value + ' ».'
+      : (activeCat === 'favoris' ? 'Tu n\'as pas encore de favoris. Clique sur le \u2661 d\'une fiche pour l\'ajouter.' : 'Aucun partenaire dans cette catégorie.');
+    nores.style.display = 'block';
+  } else {
+    nores.style.display = 'none';
+  }
+  var rc = document.getElementById('result-count');
+  if (rc) {
+    rc.textContent = vis === 0 ? '' : (vis === 1 ? '1 partenaire affiché' : vis + ' partenaires affichés');
+  }
+}
+
+var FAV_KEY = 'pa_favoris';
+function loadFavs() {
+  try {
+    var raw = localStorage.getItem(FAV_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) { return []; }
+}
+function saveFavs(arr) {
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(arr)); } catch (e) {}
+}
+var favorites = loadFavs();
+function isFav(idx) { return favorites.indexOf(idx) !== -1; }
+function toggleFav(idx) {
+  idx = parseInt(idx, 10);
+  var i = favorites.indexOf(idx);
+  if (i === -1) favorites.push(idx); else favorites.splice(i, 1);
+  saveFavs(favorites);
+  updateFavUI();
+  if (activeCat === 'favoris') applyFilters();
+  if (typeof activeMapCat !== 'undefined' && activeMapCat === 'favoris' && typeof renderMapMarkers === 'function') renderMapMarkers();
+}
+function updateFavUI() {
+  document.querySelectorAll('.fav-btn').forEach(function(b) {
+    var idx = parseInt(b.getAttribute('onclick').match(/toggleFav\((\d+)\)/)[1], 10);
+    if (isFav(idx)) { b.classList.add('on'); b.innerHTML = '&#9829;'; }
+    else { b.classList.remove('on'); b.innerHTML = '&#9825;'; }
+  });
+  var mfav = document.getElementById('mfav-btn');
+  if (mfav) {
+    var midx = parseInt(mfav.dataset.idx, 10);
+    if (isFav(midx)) { mfav.classList.add('on'); mfav.innerHTML = '&#9829; Dans mes favoris'; }
+    else { mfav.classList.remove('on'); mfav.innerHTML = '&#9825; Ajouter aux favoris'; }
+  }
+  var cnt = document.getElementById('fav-count');
+  if (cnt) cnt.textContent = favorites.length;
+}
+document.addEventListener('DOMContentLoaded', updateFavUI);
+if (document.readyState !== 'loading') updateFavUI();
+
+function tFaq(btn) {
+  var item = btn.closest('.fi');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fi').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+document.addEventListener('keydown', function(e) { if(e.key==='Escape'){ cM(); ['ml-modal','cgv-modal','pc-modal'].forEach(function(id){var el=document.getElementById(id);if(el)el.style.display='none';}); document.body.style.overflow=''; } });
+function chkR(val) { document.getElementById('telDiv').style.display = val==='main_propre' ? 'block' : 'none'; }
+
+function initForm(id, btnId) {
+  var form = document.getElementById(id);
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById(btnId);
+    btn.textContent = 'Envoi en cours...';
+    btn.disabled = true;
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+    .then(function(r) {
+      if (r.ok) { btn.textContent = 'Envoyé !'; form.reset(); }
+      else { btn.textContent = 'Erreur - contactez-nous par email'; btn.disabled=false; }
+    }).catch(function() { btn.textContent='Erreur - contactez-nous par email'; btn.disabled=false; });
+  });
+}
+initForm('pform','pfbtn');
+
+// CARTE GPS
+var mapData = [{n:"O Jinko",t:"Restaurant",a:"8 Place Paul Doumer, 13200 Arles"},{n:"Sotheary",t:"Restaurant",a:"28 Rue Voltaire, 13200 Arles"},{n:"La Relève FoodTruck",t:"Restaurant",a:"Boulevard des Lices, 13200 Arles"},{n:"Chez Nono",t:"Restaurant",a:"10 Bis Rue du 4 Septembre, 13200 Arles"},{n:"Blue Note",t:"Restaurant",a:"12 Rue du 4 Septembre, 13200 Arles"},{n:"Maxi Grill",t:"Restaurant",a:"54 Rue du 4 Septembre, 13200 Arles"},{n:"Le Coin des Amis",t:"Restaurant",a:"65 Cours Hyacinthe Bellon, 13990 Fontvieille"},{n:"Tonton Sam",t:"Restaurant",a:"10 Rue de l'Hôtel de Ville, 13200 Arles"},{n:"SuperFood",t:"Restaurant",a:"6 Rue Molière, 13200 Arles"},{n:"Plage Plage",t:"Restaurant / Glaciers",a:"6 Rue de la Cavalerie, 13200 Arles"},{n:"Le Petit Arles",t:"Restaurant",a:"29 Rue de l'Hôtel de Ville, 13200 Arles"},{n:"Mecha Uma",t:"Restaurant",a:"Arles, Avignon, Saint-Rémy-de-Provence"},{n:"Arles Pizza",t:"Restaurant",a:"18 Rue des Porcelets, 13200 Arles"},{n:"Arelatis",t:"Glaciers",a:"8 Place du Forum / 1 Rue Jean Jaurès, 13200 Arles"},{n:"Midi Nomique",t:"Restaurant",a:"19 Bis Rue de la République, 13200 Arles"},{n:"Nachos",t:"Restaurant",a:"16 Place Pie, 84000 Avignon"},{n:"Mon Chou",t:"Café / Brunch",a:"3 Place Voltaire, 13200 Arles"},{n:"Cloé Brunch",t:"Café / Brunch",a:"13 Place Voltaire, 13200 Arles"},{n:"Au Café",t:"Café / Brunch",a:"7 Rue des Petits Souliers, 30000 Nîmes"},{n:"Honoré",t:"Café / Brunch",a:"L'Isle-sur-la-Sorgue / Saint-Rémy-de-Provence"},{n:"Gonflé",t:"Boulangerie",a:"27 Rue Saint-Agricol, 84000 Avignon"},{n:"Peach",t:"Boulangerie",a:"2 Rue de la République, 13200 Arles"},{n:"La Féria du Pain",t:"Boulangerie",a:"18 Avenue Victor Hugo, 13200 Arles"},{n:"L'Antidote",t:"Bar",a:"16 Rue de la Liberté, 13200 Arles"},{n:"La Planque",t:"Bar",a:"19 Rue des Lices, 84000 Avignon"},{n:"Get Back Escape Game",t:"Activité / Loisirs",a:"14 Rue Joseph Rainard, 13200 Arles"},{n:"L'Enfance de l'Art",t:"Activité / Loisirs",a:"20 Rue Emile Jamais, 30900 Nîmes"},{n:"Lou Delahaye",t:"Activité / Loisirs",a:"44 Rue Voltaire, 13200 Arles"},{n:"Baptiste Achard",t:"Activité / Loisirs",a:"44 Rue Voltaire, 13200 Arles"},{n:"Sprinter Club Arlésien",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles"},{n:"Volley Club Arlésien",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles"},{n:"L'Arletiste",t:"Commerce & Boutique",a:"32 Rue des Suisses, 13200 Arles"},{n:"Aromatics",t:"Commerce & Boutique",a:"15 Rue de l'Hôtel de Ville, 13200 Arles"},{n:"Odéon",t:"Commerce & Boutique",a:"23 Rue de la République, 13200 Arles"},{n:"France Foto",t:"Commerce & Boutique",a:"25 Rue de la République, 13200 Arles"},{n:"Missa",t:"Commerce & Boutique",a:"14 Rue Saint Roch, 13200 Arles"},{n:"La Lunethèque",t:"Commerce & Boutique",a:"26 Rue des Suisses, 13200 Arles"},{n:"Les Fromagères",t:"Commerce & Boutique",a:"30 Rue de la République, 13200 Arles"},{n:"Tranquille Thara",t:"Commerce & Boutique",a:"21 Rue de la République, 13200 Arles"},{n:"Librairie Les Grandes Largeurs",t:"Commerce & Boutique",a:"11 Rue Réattu, 13200 Arles"},{n:"La Cave des Saveurs",t:"Commerce & Boutique",a:"25 Rue des Suisses, 13200 Arles"},{n:"Maison Genin",t:"Commerce & Boutique",a:"11 Rue des Porcelets, 13200 Arles"},{n:"Institut Moana",t:"Bien-être",a:"14 Rue Jouvene, 13200 Arles"},{n:"Calm&Co",t:"Commerce & Boutique",a:"36 Place Paul Doumer, 13200 Arles"},{n:"Savon Stories",t:"Commerce & Boutique",a:"38 Rue Carnot, 84000 Avignon"},{n:"Les Saveurs d'Auguste",t:"Commerce & Boutique",a:"22 bis Rue de l'Aspic, 30000 Nîmes"},{n:"Librairie Actes Sud",t:"Commerce & Boutique",a:"47 Rue du Docteur Fanton, 13200 Arles"},{n:"Cercle d'Escrime du Pays d'Armes",t:"Activité / Loisirs",a:"3 Boulevard des Lices, 13200 Arles"},{n:"L'Aire d'Arles",t:"Restaurant",a:"25 Rue Porte de Laure, 13200 Arles"},{n:"Oboulaba",t:"Restaurant",a:"32 Rond Point des Arènes, 13200 Arles"},{n:"Gaudina",t:"Restaurant",a:"13 Rue de l'Hôtel de Ville, 13200 Arles"},{n:"Regusto",t:"Glaciers",a:"35 Rue du Vieux Sextier, 84000 Avignon"},{n:"Le Pili",t:"Restaurant",a:"36 Place des Corps Saints, 84000 Avignon"},{n:"Céline Clément Coiffure",t:"Bien-être",a:"28 Place du Portail Matheron, 84000 Avignon"},{n:"Jolie Piqûre",t:"Bien-être",a:"16 Rue de la Verrerie, 13200 Arles"},{n:"13 encrés",t:"Bien-être",a:"55 Rue du 4 Septembre, 13200 Arles"},{n:"DimMui",t:"Restaurant",a:"22 Rue de l'Hôtel de Ville, 13200 Arles"},{n:"Victoria Dermo",t:"Bien-être",a:"16 Rue de la Verrerie, 13200 Arles"}];
+var coords = [[43.676, 4.6283], [43.6761, 4.6278], [43.6773, 4.6294], [43.6757, 4.631], [43.6759, 4.6308], [43.6756, 4.6309], [43.7256, 4.7058], [43.677, 4.6271], [43.6766, 4.6283], [43.6773, 4.6291], [43.6769, 4.6271], [43.6755, 4.628], [43.6753, 4.6276], [43.6767, 4.6285], [43.6778, 4.6267], [43.9493, 4.8055], [43.6766, 4.6281], [43.6768, 4.6282], [43.837, 4.3608], [43.9178, 5.0536], [43.95, 4.806], [43.6779, 4.6265], [43.6765, 4.6289], [43.678, 4.6295], [43.9488, 4.8058], [43.6754, 4.6302], [43.8367, 4.3601], [43.6762, 4.6279], [43.6762, 4.628], [43.6773, 4.6294], [43.6773, 4.6295], [43.6763, 4.6271], [43.677, 4.6272], [43.6776, 4.6266], [43.6779, 4.6268], [43.6758, 4.6275], [43.6764, 4.6271], [43.6774, 4.6264], [43.6776, 4.6267], [43.6775, 4.6265], [43.6764, 4.6273], [43.6768, 4.6276], [43.6758, 4.6278], [43.6761, 4.6285], [43.9495, 4.8069], [43.8367, 4.3605], [43.6764, 4.6288], [43.6773, 4.6294], [43.6784, 4.6301], [43.6782, 4.6307], [43.677, 4.6272], [43.949, 4.8073], [43.9478, 4.8043], [43.9508, 4.8085], [43.6773, 4.627], [43.6756, 4.6309], [43.6772, 4.6269], [43.6773, 4.627]];
+
+// Filtre actif sur la carte
+var activeMapCat = 'all';
+var mapMarkers = [];
+var userLatLng = null;
+var userMarker = null;
+
+function haversineKm(lat1, lon1, lat2, lon2) {
+  var R = 6371;
+  var dLat = (lat2 - lat1) * Math.PI / 180;
+  var dLon = (lon2 - lon1) * Math.PI / 180;
+  var a = Math.sin(dLat/2)*Math.sin(dLat/2) + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+function formatDistKm(km) {
+  return km < 1 ? Math.round(km * 1000) + ' m' : km.toFixed(1).replace('.', ',') + ' km';
+}
+function locateMe() {
+  var btn = document.getElementById('geo-btn');
+  if (!btn) return;
+  if (!navigator.geolocation) {
+    btn.textContent = 'Géolocalisation non disponible sur ce navigateur';
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = '📍 Localisation en cours…';
+  navigator.geolocation.getCurrentPosition(function(pos) {
+    userLatLng = [pos.coords.latitude, pos.coords.longitude];
+    if (userMarker) map.removeLayer(userMarker);
+    userMarker = L.marker(userLatLng, {
+      icon: L.divIcon({
+        className: '',
+        html: '<div style="width:18px;height:18px;background:#3498db;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 6px rgba(52,152,219,.35)"></div>',
+        iconSize: [18,18], iconAnchor: [9,9]
+      }),
+      zIndexOffset: 1000
+    }).addTo(map).bindPopup('<b>Toi</b>');
+    btn.disabled = false;
+    btn.classList.add('active');
+    btn.textContent = '✅ Localisé — trié par proximité';
+    map.setView(userLatLng, 14);
+    renderMapMarkers();
+  }, function() {
+    btn.disabled = false;
+    btn.textContent = '📍 Me localiser & trier par proximité';
+    alert("Impossible d'accéder à ta position. Vérifie que la géolocalisation est autorisée pour ce site dans les réglages de ton navigateur.");
+  }, { enableHighAccuracy: true, timeout: 10000 });
+}
+
+var map = L.map('map', {zoomControl:true, scrollWheelZoom:false}).setView([43.676, 4.628], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors',
+  maxZoom: 19
+}).addTo(map);
+
+// Config couleurs et emojis par catégorie
+var catConfig = {
+  'Restaurant':         {color:'#e74c3c', emoji:'🍔'},
+  'Boulangerie':        {color:'#e67e22', emoji:'🥐'},
+  'Café / Brunch':      {color:'#e91e8c', emoji:'☕'},
+  'Restaurant / Glaciers': {color:'#e74c3c', emoji:'🍦'},
+  'Bar':                {color:'#f39c12', emoji:'🍺'},
+  'Commerce & Boutique':{color:'#9b59b6', emoji:'🛍️'},
+  'Activité / Loisirs': {color:'#3498db', emoji:'🎯'},
+  'Bien-être':          {color:'#27ae60', emoji:'🌿'},
+  'Glaciers':           {color:'#1abc9c', emoji:'🍦'},
+};
+
+function getCatConfig(type) {
+  return catConfig[type] || {color:'#95a5a6', emoji:'📍'};
+}
+
+function mkIcon(type) {
+  var cfg = getCatConfig(type);
+  return L.divIcon({
+    className: '',
+    html: '<div style="width:34px;height:34px;background:'+cfg.color+';border-radius:50%;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1">'+cfg.emoji+'</div>',
+    iconSize:[34,34], iconAnchor:[17,17], popupAnchor:[0,-20]
+  });
+}
+
+function renderMapMarkers() {
+  mapMarkers.forEach(function(m) { map.removeLayer(m); });
+  mapMarkers = [];
+  var indices = mapData.map(function(p, i) { return i; });
+  if (userLatLng) {
+    indices.sort(function(a, b) {
+      var ca = coords[a], cb = coords[b];
+      if (!ca) return 1;
+      if (!cb) return -1;
+      var da = haversineKm(userLatLng[0], userLatLng[1], ca[0], ca[1]);
+      var db = haversineKm(userLatLng[0], userLatLng[1], cb[0], cb[1]);
+      return db - da; // furthest first so nearest is added last (on top)
+    });
+  }
+  indices.forEach(function(i) {
+    var p = mapData[i];
+    var c = coords[i];
+    if (!c) return;
+    if (activeMapCat === 'oneshot') {
+      if (!(PD[i] && PD[i].os)) return;
+    } else if (activeMapCat === 'favoris') {
+      if (typeof isFav !== 'function' || !isFav(i)) return;
+    } else if (activeMapCat !== 'all' && p.cat !== activeMapCat) {
+      return;
+    }
+    var marker = L.marker([c[0],c[1]], {icon:mkIcon(p.t)}).addTo(map);
+    var distHtml = '';
+    if (userLatLng) {
+      var d = haversineKm(userLatLng[0], userLatLng[1], c[0], c[1]);
+      distHtml = '<br><span style="color:#3498db;font-size:.74rem;font-weight:700">📍 à ' + formatDistKm(d) + '</span>';
+    }
+    marker.bindPopup('<div style="font-family:sans-serif;min-width:160px"><b style="font-size:.9rem">'+p.n+'</b><br><span style="color:#9b59b6;font-size:.72rem">'+p.t+'</span><br><span style="color:#666;font-size:.78rem">'+p.a+'</span>'+distHtml+'</div>', {maxWidth:240});
+    mapMarkers.push(marker);
+  });
+  var noMapRes = document.getElementById('map-nores');
+  if (noMapRes) {
+    noMapRes.style.display = mapMarkers.length === 0 ? 'block' : 'none';
+    if (activeMapCat === 'favoris' && mapMarkers.length === 0) {
+      noMapRes.textContent = "Tu n'as pas encore de favoris \u2014 clique sur le \u2661 d'une fiche partenaire pour l'ajouter.";
+    } else if (mapMarkers.length === 0) {
+      noMapRes.textContent = 'Aucun partenaire dans cette catégorie.';
+    }
+  }
+}
+
+// Sync partner types into mapData for map filtering
+if (typeof PD !== 'undefined') {
+  mapData.forEach(function(p,i){ p.cat = PD[i] ? PD[i].t : ''; });
+}
+renderMapMarkers();
+
+function filtMap(cat, btn) {
+  activeMapCat = cat;
+  document.querySelectorAll('.map-fb').forEach(function(b){b.classList.remove('on');});
+  btn.classList.add('on');
+  renderMapMarkers();
+}</script>
+
+<!-- MENTIONS LEGALES MODAL -->
+<div id="ml-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:800;align-items:flex-start;justify-content:center;padding:20px;backdrop-filter:blur(6px);overflow-y:auto">
+  <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:22px;max-width:760px;width:100%;margin:20px auto;position:relative">
+    <div style="height:4px;background:linear-gradient(135deg,#f7971e,#e040a0,#9b59b6);border-radius:22px 22px 0 0"></div>
+    <button onclick="document.getElementById('ml-modal').style.display='none';document.body.style.overflow=''" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#f0f0f0;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem">&#x2715;</button>
+    <div style="padding:36px">
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:28px">Mentions légales</h2>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Éditeur du site</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">
+        <strong style="color:#f0f0f0">Pass Arena SAS</strong><br>
+        Capital social : 1 000€<br>
+        Siège social : 44 rue Voltaire, 13200 Arles, France<br>
+        SIREN : 109 667 394<br>
+        SIRET : 109 667 394 00018<br>
+        Présidente : Lou Delahaye<br>
+        Directeur Général : Baptiste Achard<br>
+        Email : passarena1@gmail.com<br>
+        Téléphone : 07 68 02 20 42
+      </p>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Hébergement</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">
+        <strong style="color:#f0f0f0">GitHub Pages</strong><br>
+        GitHub Inc. — 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
+        <a href="https://pages.github.com" target="_blank" style="color:#9b59b6">https://pages.github.com</a>
+      </p>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Propriété intellectuelle</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">
+        L'ensemble du contenu de ce site (textes, images, logos, graphismes) est la propriété exclusive de Pass Arena SAS, sauf mentions contraires. Toute reproduction, représentation, modification ou exploitation non autorisée est interdite.
+      </p>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Responsabilité</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75">
+        Pass Arena SAS s'efforce de maintenir les informations à jour. Elle ne saurait être tenue responsable des erreurs ou omissions, ni de l'indisponibilité temporaire du site. Les offres des partenaires sont susceptibles d'évoluer sans préavis.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- CGV MODAL -->
+<div id="cgv-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:800;align-items:flex-start;justify-content:center;padding:20px;backdrop-filter:blur(6px);overflow-y:auto">
+  <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:22px;max-width:760px;width:100%;margin:20px auto;position:relative">
+    <div style="height:4px;background:linear-gradient(135deg,#f7971e,#e040a0,#9b59b6);border-radius:22px 22px 0 0"></div>
+    <button onclick="document.getElementById('cgv-modal').style.display='none';document.body.style.overflow=''" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#f0f0f0;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem">&#x2715;</button>
+    <div style="padding:36px">
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:8px">Conditions Générales de Vente</h2>
+      <p style="color:#666;font-size:.82rem;margin-bottom:28px">En vigueur au 15 septembre 2026</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 1 — Objet</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Les présentes CGV régissent les ventes de la carte Pass Arena par Pass Arena SAS (SIREN 109 667 394), 44 rue Voltaire, 13200 Arles, à toute personne physique âgée de 18 à 30 ans inclus (ci-après « l'Acheteur »).</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 2 — Produit</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">La carte Pass Arena est une carte de réductions nominative, physique, valable du 15 septembre 2026 au 31 août 2027 auprès des commerçants partenaires référencés sur le site passarena.fr. La liste des partenaires et leurs offres sont susceptibles d'évoluer sans préavis pendant la période de validité.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 3 — Prix et paiement</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Le prix de la carte est de <strong style="color:#f0f0f0">14,99€ TTC</strong>. Le paiement est exigible intégralement au moment de la commande. Les modalités de paiement acceptées sont communiquées lors de la commande.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 4 — Conditions d'éligibilité</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">La carte est strictement réservée aux personnes ayant entre 18 et 30 ans inclus au moment du retrait. Une pièce d'identité valide sera exigée au retrait. En cas de non-conformité d'âge, la carte ne sera pas remise et aucun remboursement ne sera effectué.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 5 — Retrait de la carte</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">La carte est remise en main propre, soit chez un partenaire point relais, soit directement avec l'équipe Pass Arena sur rendez-vous. L'Acheteur est responsable du retrait de sa carte dans un délai raisonnable. La carte n'est pas envoyée par voie postale.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 6 — Droit de rétractation et remboursement</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px"><strong style="color:#f0f0f0">La carte Pass Arena n'est ni remboursable ni échangeable.</strong> Conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux biens confectionnés selon les spécifications du consommateur ou nettement personnalisés. La carte étant nominative et personnalisée au nom de l'Acheteur, aucun délai de rétractation n'est applicable. Aucun remboursement ne sera effectué après la commande, y compris en cas de non-utilisation ou de modification des offres partenaires.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 7 — Utilisation de la carte</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">La carte est strictement personnelle et non cessible. Toute cession ou utilisation frauduleuse entraînera l'annulation immédiate de la carte sans remboursement. Pass Arena SAS se réserve le droit de vérifier l'identité du porteur à tout moment.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 8 — Responsabilité</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Pass Arena SAS ne peut être tenue responsable des offres proposées par les commerçants partenaires, de leur disponibilité ou de leur modification. Les litiges avec les partenaires relèvent de la relation directe entre l'Acheteur et le commerçant concerné.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">Article 9 — Droit applicable et litiges</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75">Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux compétents de la juridiction d'Arles seront saisis.</p>
+    </div>
+  </div>
+</div>
+
+<!-- POLITIQUE CONFIDENTIALITE MODAL -->
+<div id="pc-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:800;align-items:flex-start;justify-content:center;padding:20px;backdrop-filter:blur(6px);overflow-y:auto">
+  <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:22px;max-width:760px;width:100%;margin:20px auto;position:relative">
+    <div style="height:4px;background:linear-gradient(135deg,#f7971e,#e040a0,#9b59b6);border-radius:22px 22px 0 0"></div>
+    <button onclick="document.getElementById('pc-modal').style.display='none';document.body.style.overflow=''" style="position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;color:#f0f0f0;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem">&#x2715;</button>
+    <div style="padding:36px">
+      <h2 style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;margin-bottom:8px">Politique de confidentialité</h2>
+      <p style="color:#666;font-size:.82rem;margin-bottom:28px">Dernière mise à jour : 15 septembre 2026</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">1. Responsable du traitement</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Pass Arena SAS — 44 rue Voltaire, 13200 Arles — passarena1@gmail.com — SIREN 109 667 394</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">2. Données collectées</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Nous collectons les données suivantes :<br><br>
+      <strong style="color:#f0f0f0">Lors de l'achat de la carte :</strong> le paiement est traité directement par notre prestataire Stripe sur sa page de paiement sécurisée, qui collecte votre adresse email et vos informations bancaires. Pass Arena SAS n'a accès à aucune donnée bancaire.<br><br>
+      <strong style="color:#f0f0f0">Lors du retrait de la carte :</strong> votre nom, prénom et votre pièce d'identité (vérification visuelle uniquement, non conservée) afin de confirmer votre éligibilité d'âge.<br><br>
+      <strong style="color:#f0f0f0">Formulaire partenariat commerçant :</strong> nom du commerce, adresse, type d'activité, email, téléphone, offre envisagée.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">3. Finalités et base légale</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Vos données sont traitées pour :<br>
+      • Gérer votre commande de carte Pass Arena (base légale : exécution du contrat)<br>
+      • Vérifier votre éligibilité d'âge (base légale : obligation légale)<br>
+      • Vous contacter pour organiser le retrait (base légale : exécution du contrat)<br>
+      • Traiter les demandes de partenariat commerçant (base légale : intérêt légitime)</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">4. Destinataires des données</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Vos données sont transmises à :<br><br>
+      <strong style="color:#f0f0f0">Stripe Inc.</strong> (prestataire de paiement certifié PCI-DSS) pour le traitement sécurisé de votre paiement.<br><br>
+      <strong style="color:#f0f0f0">Formspree Inc.</strong> (prestataire de formulaires, serveurs aux États-Unis) dans le cadre du traitement des demandes de partenariat commerçant.<br><br>
+      Ces transferts hors UE sont encadrés par les clauses contractuelles types de la Commission européenne. Vos données ne sont jamais vendues à des tiers.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">5. Durée de conservation</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Vos données sont conservées pendant la durée nécessaire à la gestion de votre commande, et au maximum 3 ans après la fin de la saison Pass Arena concernée.</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">6. Vos droits</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75;margin-bottom:20px">Conformément au RGPD, vous disposez des droits suivants :<br>
+      • Droit d'accès à vos données<br>
+      • Droit de rectification<br>
+      • Droit à l'effacement (« droit à l'oubli »)<br>
+      • Droit à la limitation du traitement<br>
+      • Droit à la portabilité<br>
+      • Droit d'opposition<br><br>
+      Pour exercer ces droits : <a href="mailto:passarena1@gmail.com" style="color:#9b59b6">passarena1@gmail.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" style="color:#9b59b6">www.cnil.fr</a>).</p>
+
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:10px;color:#e040a0">7. Cookies</h3>
+      <p style="color:#888;font-size:.9rem;line-height:1.75">Ce site n'utilise pas de cookies de traçage ou publicitaires. Aucun outil de statistiques tiers n'est installé. La fonctionnalité « Mes favoris » utilise le stockage local de votre navigateur (localStorage) pour mémoriser les partenaires que vous sélectionnez : cette information reste strictement sur votre appareil, n'est jamais transmise à Pass Arena ni à un tiers, et peut être effacée à tout moment en vidant les données de navigation de votre navigateur.</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+window.addEventListener('load', function(){
+  var s = document.getElementById('splash');
+  if(s){ setTimeout(function(){ s.classList.add('hide'); }, 200); }
+});
+</script>
+
+<a href="#tarif" id="floatcta">&#127903; Obtenir ma carte</a>
+<script>
+(function(){
+  var btn = document.getElementById('floatcta');
+  var tarif = document.getElementById('tarif');
+  if (!btn || !tarif || !window.IntersectionObserver) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      btn.style.display = e.isIntersecting ? 'none' : 'flex';
+    });
+  }, {threshold: 0.15});
+  obs.observe(tarif);
+})();
+</script>
+
+<button id="backtotop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Remonter en haut">&#8593;</button>
+<script>
+(function(){
+  var btn = document.getElementById('backtotop');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('show', window.scrollY > 600);
+  }, {passive:true});
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+</script>
+</body>
+</html>
